@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <list-property name="userProperties">
+        <structure>
+            <property name="name">72.Work Order Location.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">72.Work Order Location.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">72.Work Order Location.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">72.Work Order Location.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">72.Administrator.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">72.Administrator.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">72.Administrator.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">72.Administrator.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+    </list-property>
+    <property name="72.Work Order Location.x">369</property>
+    <property name="72.Work Order Location.y">10</property>
+    <property name="72.Work Order Location.width">150</property>
+    <property name="72.Work Order Location.height">200</property>
+    <property name="72.Administrator.x">202</property>
+    <property name="72.Administrator.y">11</property>
+    <property name="72.Administrator.width">150</property>
+    <property name="72.Administrator.height">200</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="2">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.actuate.jdbc.sqlserver.SQLServerDriver</property>
+            <property name="odaURL">jdbc:actuate:sqlserver://localhost;databasename=MAXTBL</property>
+            <property name="odaUser">sa</property>
+            <encrypted-property name="odaPassword" encryptionID="jce">bc3c04e2fedfc17e</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Work Order Data Set" id="3">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">seq</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">seq</text-property>
+                    <text-property name="heading">seq</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Region</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Region</text-property>
+                    <text-property name="heading">Region</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Facility</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Facility</text-property>
+                    <text-property name="heading">Facility</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Work Order Number</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Work Order Number</text-property>
+                    <text-property name="heading">Work Order Number</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Supervisor</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Supervisor</text-property>
+                    <text-property name="heading">Supervisor</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Phone Ext</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Phone Ext</text-property>
+                    <text-property name="heading">Phone Ext</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Asset Tag</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Asset Tag</text-property>
+                    <text-property name="heading">Asset Tag</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Asset Description</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Asset Description</text-property>
+                    <text-property name="heading">Asset Description</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Estimated Hours</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Estimated Hours</text-property>
+                    <text-property name="heading">Estimated Hours</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Actual Hours</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Actual Hours</text-property>
+                    <text-property name="heading">Actual Hours</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Priority</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Priority</text-property>
+                    <text-property name="heading">Priority</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Labor and Material Cost</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Labor and Material Cost</text-property>
+                    <text-property name="heading">Labor and Material Cost</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Category</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Category</text-property>
+                    <text-property name="heading">Category</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">TheDate</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">TheDate</text-property>
+                    <text-property name="heading">TheDate</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">is-not-null</property>
+                    <expression name="expr" type="javascript">row["Work Order Number"]</expression>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">seq</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Region</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Facility</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Work Order Number</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Supervisor</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Phone Ext</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Asset Tag</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Asset Description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Estimated Hours</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Actual Hours</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Priority</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">Labor and Material Cost</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">Category</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">TheDate</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">seq</property>
+                    <property name="nativeName">seq</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">6</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Region</property>
+                    <property name="nativeName">Region</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Facility</property>
+                    <property name="nativeName">Facility</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Work Order Number</property>
+                    <property name="nativeName">Work Order Number</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">6</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Supervisor</property>
+                    <property name="nativeName">Supervisor</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Phone Ext</property>
+                    <property name="nativeName">Phone Ext</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">6</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Asset Tag</property>
+                    <property name="nativeName">Asset Tag</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">6</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Asset Description</property>
+                    <property name="nativeName">Asset Description</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Estimated Hours</property>
+                    <property name="nativeName">Estimated Hours</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">6</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Actual Hours</property>
+                    <property name="nativeName">Actual Hours</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">6</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">Priority</property>
+                    <property name="nativeName">Priority</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">6</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">Labor and Material Cost</property>
+                    <property name="nativeName">Labor and Material Cost</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">6</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">Category</property>
+                    <property name="nativeName">Category</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">TheDate</property>
+                    <property name="nativeName">TheDate</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select  seq, Region, Facility, "Work Order Number", Supervisor, "Phone Ext", "Asset Tag",
+        "Asset Description", "Estimated Hours", "Actual Hours", Priority,
+                   "Labor and Material Cost", Category, getdate() as TheDate
+   from workord where category not in('CM', 'VR') and
+                      Facility not in('Chicago', 'Naples', 'Canton', 'Lancaster', 'Bellmont',
+                                      'Pedmont')
+union
+ 
+ select  seq, Region, Facility, "Work Order Number", Supervisor, "Phone Ext", "Asset Tag",
+        "Asset Description", "Estimated Hours", "Actual Hours", Priority,
+                   "Labor and Material Cost", Category,
+                    dateadd(year,-1,getdate()) as TheDate
+    from workord where category not in('OM', 'VR') and
+                      Facility not in('Atlanta', 'Rosemont', 'Dayton', 'Austin', 'LaMount',
+                                      'Pedmont')
+                                      
+union
+ 
+ select  seq, Region, Facility, "Work Order Number", Supervisor, "Phone Ext", "Asset Tag",
+        "Asset Description", "Estimated Hours", "Actual Hours", Priority,
+                   "Labor and Material Cost", Category,
+                    dateadd(year,-2,getdate()) as TheDate
+    from workord where category not in('CM', 'VR') and
+                      Facility not in('Madison', 'Houston', 'MCAllen', 'Austin', 'LaMount',
+                                      'Chicago')]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <property name="linkedDataModels">
+        <linked-data-model name="Data Model" id="72">
+            <property name="aliasDataSets">
+                <alias-data-set name="Work Order Data Set" id="104">
+                    <property name="originDataSet">Work Order Data Set</property>
+                </alias-data-set>
+            </property>
+            <property name="drillPaths">
+                <drill-path id="107">
+                    <text-property name="displayName">Location</text-property>
+                    <simple-property-list name="drillPathColumns">
+                        <value>dataSetRow["Region"]</value>
+                        <value>dataSetRow["Facility"]</value>
+                    </simple-property-list>
+                </drill-path>
+                <drill-path id="108">
+                    <text-property name="displayName">TheDate</text-property>
+                    <simple-property-list name="drillPathColumns">
+                        <value>dataSetRow["TheDate"]["Year"]</value>
+                        <value>dataSetRow["TheDate"]["Quarter"]</value>
+                    </simple-property-list>
+                </drill-path>
+                <drill-path id="109">
+                    <text-property name="displayName">Category</text-property>
+                    <simple-property-list name="drillPathColumns">
+                        <value>dataSetRow["Category"]</value>
+                        <value>dataSetRow["Asset Tag"]</value>
+                    </simple-property-list>
+                </drill-path>
+            </property>
+            <property name="categories">
+                <category name="Work Order Data Set" id="73">
+                    <property name="categoryColumns">
+                        <category-column name="seq" id="74">
+                            <property name="aliasDataSet">Data Model/Work Order Data Set</property>
+                            <property name="resultSetColumnName">seq</property>
+                        </category-column>
+                        <category-column name="Region" id="75">
+                            <property name="aliasDataSet">Data Model/Work Order Data Set</property>
+                            <property name="resultSetColumnName">Region</property>
+                        </category-column>
+                        <category-column name="Facility" id="76">
+                            <property name="aliasDataSet">Data Model/Work Order Data Set</property>
+                            <property name="resultSetColumnName">Facility</property>
+                        </category-column>
+                        <category-column name="Work Order Number" id="77">
+                            <property name="aliasDataSet">Data Model/Work Order Data Set</property>
+                            <property name="resultSetColumnName">Work Order Number</property>
+                        </category-column>
+                        <category-column name="Supervisor" id="78">
+                            <property name="aliasDataSet">Data Model/Work Order Data Set</property>
+                            <property name="resultSetColumnName">Supervisor</property>
+                        </category-column>
+                        <category-column name="Phone Ext" id="79">
+                            <property name="aliasDataSet">Data Model/Work Order Data Set</property>
+                            <property name="resultSetColumnName">Phone Ext</property>
+                        </category-column>
+                        <category-column name="Asset Tag" id="80">
+                            <property name="aliasDataSet">Data Model/Work Order Data Set</property>
+                            <property name="resultSetColumnName">Asset Tag</property>
+                        </category-column>
+                        <category-column name="Asset Description" id="81">
+                            <property name="aliasDataSet">Data Model/Work Order Data Set</property>
+                            <property name="resultSetColumnName">Asset Description</property>
+                        </category-column>
+                        <category-column name="Estimated Hours" id="82">
+                            <property name="aliasDataSet">Data Model/Work Order Data Set</property>
+                            <property name="resultSetColumnName">Estimated Hours</property>
+                        </category-column>
+                        <category-column name="Actual Hours" id="83">
+                            <property name="aliasDataSet">Data Model/Work Order Data Set</property>
+                            <property name="resultSetColumnName">Actual Hours</property>
+                        </category-column>
+                        <category-column name="Priority" id="84">
+                            <property name="aliasDataSet">Data Model/Work Order Data Set</property>
+                            <property name="resultSetColumnName">Priority</property>
+                        </category-column>
+                        <category-column name="Labor and Material Cost" id="85">
+                            <property name="aliasDataSet">Data Model/Work Order Data Set</property>
+                            <property name="resultSetColumnName">Labor and Material Cost</property>
+                        </category-column>
+                        <category-column name="Category" id="86">
+                            <property name="aliasDataSet">Data Model/Work Order Data Set</property>
+                            <property name="resultSetColumnName">Category</property>
+                        </category-column>
+                        <category-column name="TheDate" id="87">
+                            <property name="aliasDataSet">Data Model/Work Order Data Set</property>
+                            <property name="resultSetColumnName">TheDate</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+    </property>
+</datamart>

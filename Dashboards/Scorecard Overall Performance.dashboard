@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="layoutPreference">auto layout</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
+    <styles>
+        <style name="crosstab-cell" id="2">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="3">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <body>
+        <text name="8e20f690-e271-4684-84c9-966bebccceaa" id="10">
+            <text-property name="content"><![CDATA[http://actuateone/Scorecard/portal_view.aspx?viewID=-165761331&amp;s=ACTUATEONE&amp;d=Facilities&amp;m=Standard&amp;u=sysadmin&amp;p=sysadmin]]></text-property>
+        </text>
+        <text name="076deda3-d3c4-4e38-a61d-d02d2d12dae2" id="19">
+            <text-property name="content"><![CDATA[]]></text-property>
+        </text>
+    </body>
+    <property name="dashboardView">
+        <dashboard id="4">
+            <property name="activeTab">5c407c55-215b-46b6-a04b-79d5a32f64bf</property>
+            <property name="tabs">
+                <tab-element name="8db04f66-8a44-41df-a533-c9e1c373086f" id="11">
+                    <property name="title">Overall Performance</property>
+                    <property name="freeFormGadgets">
+                        <gadget name="b5fed30e-14a9-4466-8dfc-205a9cabe1cb" id="17">
+                            <list-property name="userProperties">
+                                <structure>
+                                    <property name="name">candidateId</property>
+                                    <property name="type">string</property>
+                                </structure>
+                            </list-property>
+                            <property name="candidateId">-165761331</property>
+                            <property name="x">201px</property>
+                            <property name="y">11px</property>
+                            <property name="height">654px</property>
+                            <property name="width">1081px</property>
+                            <property name="title">New Performance View Gadget 1</property>
+                            <property name="gadgetContentType">html</property>
+                            <property name="zIndex">2</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">654px</property>
+                            <property name="width">1081px</property>
+                            <property name="caption">
+                                <gadget-caption id="18">
+                                    <property name="showCaption">false</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="20">
+                                    <property name="gadgetType">View</property>
+                                    <property name="internalReportLetRef">076deda3-d3c4-4e38-a61d-d02d2d12dae2</property>
+                                </data-view>
+                            </property>
+                        </gadget>
+                        <gadget name="9d0f849c-220a-4dc1-a24f-e8e116650054" id="14">
+                            <property name="x">10px</property>
+                            <property name="y">429px</property>
+                            <property name="height">150px</property>
+                            <property name="width">734px</property>
+                            <property name="zIndex">1</property>
+                            <property name="isVisible">false</property>
+                            <property name="height">150px</property>
+                            <property name="width">734px</property>
+                            <property name="caption">
+                                <gadget-caption id="16">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Source Sans Pro"</property>
+                                    <property name="fontSize">24pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="color">#000000</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <current-selections id="15"/>
+                            </property>
+                        </gadget>
+                    </property>
+                </tab-element>
+            </property>
+        </dashboard>
+    </property>
+</report>

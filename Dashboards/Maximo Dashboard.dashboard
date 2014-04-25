@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="layoutPreference">auto layout</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems</property>
+        </structure>
+    </list-property>
+    <property name="dashboardView">
+        <dashboard id="2">
+            <property name="activeTab">93472128-2231-4877-9491-9725d9dc9405</property>
+            <property name="tabs">
+                <tab-element name="93472128-2231-4877-9491-9725d9dc9405" id="21">
+                    <property name="title">Work Order Performance</property>
+                    <property name="externalTab">/Applications/MaximoApp/Dashboards/Work Order Performance.dashboard</property>
+                    <property name="externalTabName">40328274-ab88-43c4-b517-c354cfa1fa23</property>
+                </tab-element>
+                <tab-element name="49e2f886-f5bb-4898-a7bc-5366fabf8c4f" id="19">
+                    <property name="title">Work Order Analysis</property>
+                    <property name="externalTab">/Applications/MaximoApp/Dashboards/Work Order Analysis.dashboard</property>
+                    <property name="externalTabName">b0a95772-50c0-4e5f-b59a-f5c31bc174a2</property>
+                </tab-element>
+                <tab-element name="bb072dcc-88dc-485a-96ad-82232c58c9eb" id="28">
+                    <property name="title">Today's Workorders</property>
+                    <property name="externalTab">/Applications/MaximoApp/Dashboards/Today's Workorders.dashboard</property>
+                    <property name="externalTabName">e54d3559-35ff-4560-ad45-6f6f89cccb07</property>
+                </tab-element>
+                <tab-element name="2fb2a7df-bfc5-4c97-96b8-c1b34762ccf5" id="9">
+                    <property name="title">Facilities Book</property>
+                    <property name="externalTab">/Applications/MaximoApp/Dashboards/Facilities Book.dashboard</property>
+                    <property name="externalTabName">b37e4650-e213-4a10-a092-16f4d648dcad</property>
+                </tab-element>
+                <tab-element name="cb8c59e4-9e11-4ee0-acee-1dac2b145bd9" id="10">
+                    <property name="title">Overall Performance</property>
+                    <property name="externalTab">/Applications/MaximoApp/Dashboards/Scorecard Overall Performance.dashboard</property>
+                    <property name="externalTabName">8db04f66-8a44-41df-a533-c9e1c373086f</property>
+                </tab-element>
+                <tab-element name="1f6a73b4-1be3-4ba4-9093-0a6ff0fad265" id="17">
+                    <property name="title">World Performance</property>
+                    <property name="externalTab">/Applications/MaximoApp/Dashboards/World Performance.dashboard</property>
+                    <property name="externalTabName">7142fb97-0c70-46d3-8169-e969970bad39</property>
+                </tab-element>
+            </property>
+        </dashboard>
+    </property>
+</report>

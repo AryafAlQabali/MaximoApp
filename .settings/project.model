@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.actuate.istudio.analysis.model:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.actuate.istudio.analysis.model="http:///com.actuate.istudio.analysis.model.ecore" name="MaximoApp">
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="BIRT Online Maps.rptlibrary" path="/MaximoApp/BIRT Online Maps.rptlibrary" reports="//@files.22"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Facilities Book.dashboard" path="/MaximoApp/Dashboards/Facilities Book.dashboard"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Maximo Dashboard.dashboard" path="/MaximoApp/Dashboards/Maximo Dashboard.dashboard"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Scorecard Overall Performance.dashboard" path="/MaximoApp/Dashboards/Scorecard Overall Performance.dashboard"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Today's Workorders.dashboard" path="/MaximoApp/Dashboards/Today's Workorders.dashboard"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Work Order Analysis.dashboard" path="/MaximoApp/Dashboards/Work Order Analysis.dashboard">
+    <missingDependencies>platform:/resource/MaximoApp/Data%20Objects/wo_datadesign_dm.data</missingDependencies>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Work Order Performance.dashboard" path="/MaximoApp/Dashboards/Work Order Performance.dashboard"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="World Performance.dashboard" path="/MaximoApp/Dashboards/World Performance.dashboard"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="Maximo.data" path="/MaximoApp/Data Objects/Maximo.data"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="Maximo.datadesign" path="/MaximoApp/Data Objects/Maximo.datadesign">
+    <dataSets name="Administrator">
+      <columns name="Region"/>
+      <columns name="Facility"/>
+      <columns name="Asset Tag"/>
+      <columns name="Total Cost"/>
+    </dataSets>
+    <dataSets name="maxdata">
+      <columns name="id"/>
+      <columns name="seq"/>
+      <columns name="date1"/>
+      <columns name="date2"/>
+      <columns name="date3"/>
+      <columns name="date4"/>
+      <columns name="n1"/>
+      <columns name="n2"/>
+      <columns name="n3"/>
+      <columns name="n4"/>
+      <columns name="n5"/>
+      <columns name="n6"/>
+      <columns name="n7"/>
+      <columns name="n8"/>
+      <columns name="n9"/>
+      <columns name="n10"/>
+      <columns name="t1"/>
+      <columns name="t2"/>
+      <columns name="t3"/>
+      <columns name="t4"/>
+      <columns name="t5"/>
+      <columns name="t6"/>
+      <columns name="t7"/>
+      <columns name="t8"/>
+      <columns name="t9"/>
+      <columns name="t10"/>
+    </dataSets>
+    <dataSets name="WorkOrders">
+      <columns name="ID"/>
+      <columns name="seq"/>
+      <columns name="Region"/>
+      <columns name="Facility"/>
+      <columns name="Work Order Number"/>
+      <columns name="Supervisor"/>
+      <columns name="Phone Ext"/>
+      <columns name="Asset Tag"/>
+      <columns name="Asset Description"/>
+      <columns name="Opened Date"/>
+      <columns name="Closed Date"/>
+      <columns name="Estimated Hours"/>
+      <columns name="Actual Hours"/>
+      <columns name="Priority"/>
+      <columns name="Labor and Material Cost"/>
+      <columns name="Category"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="wo_datadesign_dm.data" path="/MaximoApp/Data Objects/wo_datadesign_dm.data"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="wo_datadesign_dm.datadesign" path="/MaximoApp/Data Objects/wo_datadesign_dm.datadesign">
+    <dataSets name="Work Order Data Set">
+      <columns name="seq"/>
+      <columns name="Region"/>
+      <columns name="Facility"/>
+      <columns name="Work Order Number"/>
+      <columns name="Supervisor"/>
+      <columns name="Phone Ext"/>
+      <columns name="Asset Tag"/>
+      <columns name="Asset Description"/>
+      <columns name="Estimated Hours"/>
+      <columns name="Actual Hours"/>
+      <columns name="Priority"/>
+      <columns name="Labor and Material Cost"/>
+      <columns name="Category"/>
+      <columns name="TheDate"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="Maximo.rptlibrary" path="/MaximoApp/Maximo.rptlibrary" reports="//@files.13 //@files.14 //@files.15 //@files.16 //@files.17 //@files.19 //@files.20 //@files.21 //@files.23"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Outage Chart.rptdesign" path="/MaximoApp/Report Designs/Outage Chart.rptdesign" libraries="//@files.12">
+    <dataSets name="Outage Data Set">
+      <columns name="the_month"/>
+      <columns name="critical_out"/>
+      <columns name="all_out"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="ParetoChart.rptdesign" path="/MaximoApp/Report Designs/ParetoChart.rptdesign" libraries="//@files.12">
+    <missingDependencies>platform:/resource/MaximoApp/ThemesReportItems3.rptlibrary</missingDependencies>
+    <dataSets name="Operation Data Set">
+      <columns name="Failure Code"/>
+      <columns name="Failures"/>
+      <columns name="monthword"/>
+      <columns name="TFailures"/>
+      <columns name="RunningT"/>
+      <columns name="Operation" expression="BirtMath.round(row[&quot;RunningT&quot;]/row[&quot;TFailures&quot;]*100)"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Priority Closed.rptdesign" path="/MaximoApp/Report Designs/Priority Closed.rptdesign" libraries="//@files.12">
+    <missingDependencies>platform:/resource/MaximoApp/Report%20Designs/WorkOrd%20Detail%20Maximo.rptdesign</missingDependencies>
+    <missingDependencies>platform:/resource/MaximoApp/ThemesReportItems3.rptlibrary</missingDependencies>
+    <missingDependencies>platform:/resource/MaximoApp/Report%20Designs/WorkOrd%20Detail%20Actuate.rptdesign</missingDependencies>
+    <dataSets name="Priority closed Data Set">
+      <columns name="t1"/>
+      <columns name="t2"/>
+      <columns name="t3"/>
+      <columns name="t4"/>
+      <columns name="t5"/>
+      <columns name="t6"/>
+      <columns name="t7"/>
+      <columns name="t8"/>
+      <columns name="t9"/>
+      <columns name="t10"/>
+      <columns name="n1"/>
+      <columns name="n2"/>
+      <columns name="n3"/>
+      <columns name="n4"/>
+      <columns name="n5"/>
+      <columns name="n6"/>
+      <columns name="n7"/>
+      <columns name="n8"/>
+      <columns name="n9"/>
+      <columns name="n10"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WOTXT.rptdesign" path="/MaximoApp/Report Designs/WOTXT.rptdesign" libraries="//@files.12">
+    <missingDependencies>platform:/resource/MaximoApp/Report%20Designs/WorkOrd%20Waiting.rptdesign</missingDependencies>
+    <missingDependencies>platform:/resource/MaximoApp/ThemesReportItems3.rptlibrary</missingDependencies>
+    <dataSets name="WO TXT Data Set">
+      <columns name="t1"/>
+      <columns name="t2"/>
+      <columns name="t3"/>
+      <columns name="t4"/>
+      <columns name="t5"/>
+      <columns name="t6"/>
+      <columns name="t7"/>
+      <columns name="t8"/>
+      <columns name="t9"/>
+      <columns name="t10"/>
+      <columns name="n1"/>
+      <columns name="n2"/>
+      <columns name="n3"/>
+      <columns name="n4"/>
+      <columns name="n5"/>
+      <columns name="n6"/>
+      <columns name="n7"/>
+      <columns name="n8"/>
+      <columns name="n9"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd Detail Actuate.rptdesign" path="/MaximoApp/Report Designs/WorkOrd Detail Actuate.rptdesign" libraries="//@files.12">
+    <missingDependencies>platform:/resource/MaximoApp/ThemesReportItems3.rptlibrary</missingDependencies>
+    <dataSets name="Work Order Detail Data Set">
+      <columns name="seq"/>
+      <columns name="Region"/>
+      <columns name="Facility"/>
+      <columns name="Work Order Number"/>
+      <columns name="Supervisor"/>
+      <columns name="Phone Ext"/>
+      <columns name="Asset Tag"/>
+      <columns name="Asset Description"/>
+      <columns name="Estimated Hours"/>
+      <columns name="Actual Hours"/>
+      <columns name="Priority"/>
+      <columns name="Labor and Material Cost"/>
+      <columns name="Category"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd Detail Maximo.rptdesign" path="/MaximoApp/Report Designs/WorkOrd Detail Maximo.rptdesign">
+    <missingDependencies>platform:/resource/MaximoApp/ThemesReportItems3.rptlibrary</missingDependencies>
+    <dataSets name="Work Order Detail Data Set">
+      <columns name="seq"/>
+      <columns name="Region"/>
+      <columns name="Facility"/>
+      <columns name="Work Order Number"/>
+      <columns name="Supervisor"/>
+      <columns name="Phone Ext"/>
+      <columns name="Asset Tag"/>
+      <columns name="Asset Description"/>
+      <columns name="Estimated Hours"/>
+      <columns name="Actual Hours"/>
+      <columns name="Priority"/>
+      <columns name="Labor and Material Cost"/>
+      <columns name="Category"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd Drill.rptdesign" path="/MaximoApp/Report Designs/WorkOrd Drill.rptdesign" libraries="//@files.12">
+    <missingDependencies>platform:/resource/MaximoApp/ThemesReportItems3.rptlibrary</missingDependencies>
+    <dataSets name="Work Order Detail Data Set">
+      <columns name="seq"/>
+      <columns name="Region"/>
+      <columns name="Facility"/>
+      <columns name="Work Order Number"/>
+      <columns name="Supervisor"/>
+      <columns name="Phone Ext"/>
+      <columns name="Asset Tag"/>
+      <columns name="Asset Description"/>
+      <columns name="Estimated Hours"/>
+      <columns name="Actual Hours"/>
+      <columns name="Priority"/>
+      <columns name="Labor and Material Cost"/>
+      <columns name="Category"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd Waiting.rptdesign" path="/MaximoApp/Report Designs/WorkOrd Waiting.rptdesign" libraries="//@files.12">
+    <missingDependencies>platform:/resource/MaximoApp/ThemesReportItems3.rptlibrary</missingDependencies>
+    <dataSets name="Work Order Detail Data Set">
+      <columns name="seq"/>
+      <columns name="Region"/>
+      <columns name="Facility"/>
+      <columns name="Work Order Number"/>
+      <columns name="Supervisor"/>
+      <columns name="Phone Ext"/>
+      <columns name="Asset Tag"/>
+      <columns name="Asset Description"/>
+      <columns name="Estimated Hours"/>
+      <columns name="Actual Hours"/>
+      <columns name="Priority"/>
+      <columns name="Labor and Material Cost"/>
+      <columns name="Category"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd by Cause.rptdesign" path="/MaximoApp/Report Designs/WorkOrd by Cause.rptdesign" libraries="//@files.12">
+    <missingDependencies>platform:/resource/MaximoApp/ThemesReportItems3.rptlibrary</missingDependencies>
+    <dataSets name="Work Order Detail Data Set">
+      <columns name="seq"/>
+      <columns name="Region"/>
+      <columns name="Facility"/>
+      <columns name="Work Order Number"/>
+      <columns name="Supervisor"/>
+      <columns name="Phone Ext"/>
+      <columns name="Asset Tag"/>
+      <columns name="Asset Description"/>
+      <columns name="Estimated Hours"/>
+      <columns name="Actual Hours"/>
+      <columns name="Priority"/>
+      <columns name="Labor and Material Cost"/>
+      <columns name="Category"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Workorder Location.rptdesign" path="/MaximoApp/Report Designs/Workorder Location.rptdesign" libraries="//@files.0">
+    <missingDependencies>platform:/resource/MaximoApp/ThemesReportItems3.rptlibrary</missingDependencies>
+    <dataSets name="Data Set">
+      <columns name="wonum"/>
+      <columns name="person"/>
+      <columns name="Address"/>
+      <columns name="Lat"/>
+      <columns name="Lng"/>
+      <columns name="priority"/>
+      <columns name="assetnum"/>
+      <columns name="status"/>
+      <columns name="worktype"/>
+      <columns name="description"/>
+      <columns name="Pin" expression="&quot;A&quot;"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="maximo inventory chart.rptdesign" path="/MaximoApp/Report Designs/maximo inventory chart.rptdesign" libraries="//@files.12">
+    <missingDependencies>platform:/resource/MaximoApp/ThemesReportItems3.rptlibrary</missingDependencies>
+    <dataSets name="Monthly data">
+      <columns name="dateall"/>
+      <columns name="datemonth"/>
+      <columns name="monthname"/>
+      <columns name="spend"/>
+      <columns name="outage"/>
+      <columns name="position"/>
+    </dataSets>
+    <dataSets name="Pick List">
+      <columns name="dateall"/>
+      <columns name="monthname"/>
+      <columns name="position"/>
+      <columns name="dateyear"/>
+      <columns name="ViewDate" expression="row[&quot;dateyear&quot;]+'  '+row[&quot;monthname&quot;]"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="ThemesReportItems3.rptlibrary" path="/MaximoApp/ThemesReportItems3.rptlibrary"/>
+</com.actuate.istudio.analysis.model:Project>

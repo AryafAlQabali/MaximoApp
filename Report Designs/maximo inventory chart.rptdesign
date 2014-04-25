@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">Maximo.rptlibrary</property>
+            <property name="namespace">Maximo</property>
+        </structure>
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="FocusDate" id="14">
+            <text-property name="promptText">Please Select the Month to Focus on</text-property>
+            <property name="valueType">dynamic</property>
+            <property name="isRequired">true</property>
+            <property name="dataSetName">Pick List</property>
+            <expression name="valueExpr" type="javascript">dataSetRow["dateall"]</expression>
+            <expression name="labelExpr" type="javascript">dataSetRow["ViewDate"]</expression>
+            <expression name="sortByColumn">dataSetRow["position"]</expression>
+            <property name="sortDirection">asc</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">false</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="20"
+ extends="Maximo.Data Source">
+            <property name="odaDriverClass">com.actuate.jdbc.sqlserver.SQLServerDriver</property>
+            <property name="odaURL">jdbc:actuate:sqlserver://localhost;databasename=MAXTBL</property>
+            <property name="odaUser">sa</property>
+            <encrypted-property name="odaPassword" encryptionID="jce">bc3c04e2fedfc17e</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Monthly data" id="8">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">dateall</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">dateall</text-property>
+                    <text-property name="heading">dateall</text-property>
+                    <property name="displayLength">23</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">datemonth</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">datemonth</text-property>
+                    <text-property name="heading">datemonth</text-property>
+                    <property name="displayLength">11</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">monthname</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">monthname</text-property>
+                    <text-property name="heading">monthname</text-property>
+                    <property name="displayLength">50</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">spend</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">spend</text-property>
+                    <text-property name="heading">spend</text-property>
+                    <property name="displayLength">22</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">outage</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">outage</text-property>
+                    <text-property name="heading">outage</text-property>
+                    <property name="displayLength">22</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">position</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">position</text-property>
+                    <text-property name="heading">position</text-property>
+                    <property name="displayLength">11</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">mth01</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth02</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">2</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth03</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">3</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth04</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">4</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth05</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">5</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth06</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">6</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth07</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">7</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth08</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">8</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth09</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">9</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth10</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">10</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth11</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">11</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth12</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">12</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth13</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">13</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth14</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">14</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth15</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">15</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth16</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">16</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth17</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">17</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth18</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">18</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth19</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">19</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth20</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">20</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth21</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">21</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth22</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">22</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth23</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">23</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">mth24</property>
+                    <property name="paramName">FocusDate</property>
+                    <property name="dataType">string</property>
+                    <property name="position">24</property>
+                    <expression name="defaultValue" type="javascript">'Jul 30,2010 12:54 PM'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">dateall</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">datemonth</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">monthname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">spend</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">outage</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">position</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">dateall</property>
+                    <property name="nativeName">dateall</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">datemonth</property>
+                    <property name="nativeName">datemonth</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">monthname</property>
+                    <property name="nativeName">monthname</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">spend</property>
+                    <property name="nativeName">spend</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">outage</property>
+                    <property name="nativeName">outage</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">position</property>
+                    <property name="nativeName">position</property>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select (getdate()) as dateall,month(?) as datemonth,
+        t1 as monthname, n1 as spend, n2 as outage, 1 as position
+  from maxdata where month(?) = seq and id = 'month'
+  union
+select dateadd(month,-1,getdate()) as dateall,month(dateadd(month,-1,?)) as 
+
+datemonth, 
+        t1 as monthname, n1 as spend, n2 as outage, 2 as position
+  from maxdata where month(dateadd(month,-1,?)) = seq and id = 'month'
+  union
+select dateadd(month,-2,getdate()) as dateall,month(dateadd(month,-2,?)) as 
+
+datemonth, 
+        t1 as monthname, n1 as spend, n2 as outage, 3 as position
+  from maxdata where month(dateadd(month,-2,?)) = seq and id = 'month'
+  union
+select dateadd(month,-3,getdate()) as dateall,month(dateadd(month,-3,?)) as 
+
+datemonth,
+        t1 as monthname, n1 as spend, n2 as outage, 4 as position
+  from maxdata where month(dateadd(month,-3,?)) = seq and id = 'month'
+  union
+select dateadd(month,-4,getdate()) as dateall,month(dateadd(month,-4,?)) as 
+
+datemonth,
+        t1 as monthname, n1 as spend, n2 as outage, 5 as position
+  from maxdata where month(dateadd(month,-4,?)) = seq and id = 'month'
+  union
+select dateadd(month,-5,getdate()) as dateall,month(dateadd(month,-5,?)) as 
+
+datemonth,
+        t1 as monthname, n1 as spend, n2 as outage, 6 as position
+  from maxdata where month(dateadd(month,-5,?)) = seq and id = 'month'
+  union
+select dateadd(month,-6,getdate()) as dateall,month(dateadd(month,-6,?)) as 
+
+datemonth,
+        t1 as monthname, n1 as spend, n2 as outage, 7 as position
+  from maxdata where month(dateadd(month,-6,?)) = seq and id = 'month'
+  union
+select dateadd(month,-7,getdate()) as dateall,month(dateadd(month,-7,?)) as 
+
+datemonth,
+        t1 as monthname, n1 as spend, n2 as outage, 8 as position
+  from maxdata where month(dateadd(month,-7,?)) = seq and id = 'month'
+  union
+select dateadd(month,-8,getdate()) as dateall,month(dateadd(month,-8,?)) as 
+
+datemonth,
+        t1 as monthname, n1 as spend, n2 as outage, 9 as position
+  from maxdata where month(dateadd(month,-8,?)) = seq and id = 'month'
+  union
+select dateadd(month,-9,getdate()) as dateall,month(dateadd(month,-9,?)) as 
+
+datemonth,
+        t1 as monthname, n1 as spend, n2 as outage, 10 as position
+  from maxdata where month(dateadd(month,-9,?)) = seq and id = 'month'
+  union
+select dateadd(month,-10,getdate()) as dateall,month(dateadd(month,-10,?)) 
+
+as datemonth,
+        t1 as monthname, n1 as spend, n2 as outage, 11 as position
+  from maxdata where month(dateadd(month,-10,?)) = seq and id = 'month'
+  union
+select dateadd(month,-11,getdate()) as dateall,month(dateadd(month,-11,?)) 
+
+as datemonth,
+        t1 as monthname, n1 as spend, n2 as outage, 12 as position
+  from maxdata where month(dateadd(month,-11,?)) = seq and id = 'month']]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>1.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>dateall</design:name>
+            <design:position>1</design:position>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>23</design:precision>
+            <design:scale>3</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>dateall</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>dateall</design:label>
+            <design:formattingHints>
+              <design:displaySize>23</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>datemonth</design:name>
+            <design:position>2</design:position>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>datemonth</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>datemonth</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>monthname</design:name>
+            <design:position>3</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>monthname</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>monthname</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>spend</design:name>
+            <design:position>4</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>spend</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>spend</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>outage</design:name>
+            <design:position>5</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>outage</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>outage</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Pick List" id="10">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">ViewDate</property>
+                    <expression name="expression" type="javascript">row["dateyear"]+'  '+row["monthname"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">dateall</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">dateall</text-property>
+                    <text-property name="heading">dateall</text-property>
+                    <property name="displayLength">23</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">monthname</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">monthname</text-property>
+                    <text-property name="heading">monthname</text-property>
+                    <property name="displayLength">50</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">position</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">position</text-property>
+                    <text-property name="heading">position</text-property>
+                    <property name="displayLength">11</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">dateyear</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">dateyear</text-property>
+                    <text-property name="heading">dateyear</text-property>
+                    <property name="displayLength">11</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">ViewDate</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">dateall</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">monthname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">position</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">dateyear</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">ViewDate</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">dateall</property>
+                    <property name="nativeName">dateall</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">monthname</property>
+                    <property name="nativeName">monthname</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">position</property>
+                    <property name="nativeName">position</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">dateyear</property>
+                    <property name="nativeName">dateyear</property>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select (getdate()) as dateall,
+        t1 as monthname, 1 as position, year(dateadd(month,-1,getdate())) as dateyear
+  from maxdata where month(dateadd(month,0,getdate())) = seq and id = 'month'
+  union
+select dateadd(month,-1,getdate()) as dateall,
+        t1 as monthname, 2 as position, year(dateadd(month,-1,getdate())) as dateyear
+  from maxdata where month(dateadd(month,-1,getdate())) = seq and id = 'month'
+  union
+select dateadd(month,-2,getdate()) as dateall, 
+        t1 as monthname, 3 as position, year(dateadd(month,-2,getdate())) as dateyear
+  from maxdata where month(dateadd(month,-2,getdate())) = seq and id = 'month'
+  union
+select dateadd(month,-3,getdate()) as dateall,
+        t1 as monthname, 4 as position, year(dateadd(month,-3,getdate())) as dateyear
+  from maxdata where month(dateadd(month,-3,getdate())) = seq and id = 'month'
+  union
+select dateadd(month,-4,getdate()) as dateall,
+        t1 as monthname, 5 as position, year(dateadd(month,-4,getdate())) as dateyear
+  from maxdata where month(dateadd(month,-4,getdate())) = seq and id = 'month'
+  union
+select dateadd(month,-5,getdate()) as dateall,
+        t1 as monthname, 6 as position, year(dateadd(month,-5,getdate())) as dateyear
+  from maxdata where month(dateadd(month,-5,getdate())) = seq and id = 'month'
+  union
+select dateadd(month,-6,getdate()) as dateall,
+        t1 as monthname, 7 as position, year(dateadd(month,-6,getdate())) as dateyear
+  from maxdata where month(dateadd(month,-6,getdate())) = seq and id = 'month'
+  union
+select dateadd(month,-7,getdate()) as dateall,
+        t1 as monthname, 8 as position, year(dateadd(month,-7,getdate())) as dateyear
+  from maxdata where month(dateadd(month,-7,getdate())) = seq and id = 'month'
+  union
+select dateadd(month,-8,getdate()) as dateall,
+        t1 as monthname, 9 as position, year(dateadd(month,-8,getdate())) as dateyear
+  from maxdata where month(dateadd(month,-8,getdate())) = seq and id = 'month'
+  union
+select dateadd(month,-9,getdate()) as dateall,
+        t1 as monthname, 10 as position, year(dateadd(month,-9,getdate())) as dateyear
+  from maxdata where month(dateadd(month,-9,getdate())) = seq and id = 'month'
+  union
+select dateadd(month,-10,getdate()) as dateall,
+        t1 as monthname, 11 as position, year(dateadd(month,-10,getdate())) as dateyear
+  from maxdata where month(dateadd(month,-10,getdate())) = seq and id = 'month'
+  union
+select dateadd(month,-11,getdate()) as dateall,
+        t1 as monthname, 12 as position, year(dateadd(month,-11,getdate())) as dateyear
+  from maxdata where month(dateadd(month,-11,getdate())) = seq and id = 'month']]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>1.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>dateall</design:name>
+            <design:position>1</design:position>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>23</design:precision>
+            <design:scale>3</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>dateall</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>dateall</design:label>
+            <design:formattingHints>
+              <design:displaySize>23</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>datemonth</design:name>
+            <design:position>2</design:position>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>datemonth</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>datemonth</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>monthname</design:name>
+            <design:position>3</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>monthname</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>monthname</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>spend</design:name>
+            <design:position>4</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>spend</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>spend</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>outage</design:name>
+            <design:position>5</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>outage</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>outage</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>position</design:name>
+            <design:position>6</design:position>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>position</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>position</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <extended-item extensionName="Chart" id="30">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="Inventory Outage vs Oracle Financials Inventory Spend">
+      <font size="12.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" orientation="0" position="1">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,572.25,286.125"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="12.0,8.0,24.0,16.0,20.0" seriesDefinitionIndex="1"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes>
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="LineSeries" visible="true" seriesIdentifier="Inventory Spend" stacked="false">
+      <label visible="false">
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;spend&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="LineSeries" seriesIdentifier="Outage Pattern" stacked="false">
+      <label visible="false">
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;outage&quot;] * 10000">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers type="0" visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions sorting="1">
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;monthname&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="5"/>
+    <sortKey definition="row[&quot;position&quot;]"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <property name="inheritColumns">false</property>
+            <property name="height">2in</property>
+            <property name="width">5in</property>
+            <expression name="bookmark" type="javascript">"INVSPEND"</expression>
+            <property name="dataSet">Monthly data</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">dateall</property>
+                    <expression name="expression" type="javascript">dataSetRow["dateall"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">datemonth</property>
+                    <expression name="expression" type="javascript">dataSetRow["datemonth"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">monthname</property>
+                    <expression name="expression" type="javascript">dataSetRow["monthname"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">spend</property>
+                    <expression name="expression" type="javascript">dataSetRow["spend"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">outage</property>
+                    <expression name="expression" type="javascript">dataSetRow["outage"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">position</property>
+                    <expression name="expression" type="javascript">dataSetRow["position"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <property name="theme">ThemesReportItems3.Modern</property>
+        </extended-item>
+    </body>
+</report>

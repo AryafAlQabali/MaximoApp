@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="layoutPreference">auto layout</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
+    <property name="dashboardView">
+        <dashboard id="2">
+            <property name="activeTab">40328274-ab88-43c4-b517-c354cfa1fa23</property>
+            <property name="tabs">
+                <tab-element name="40328274-ab88-43c4-b517-c354cfa1fa23" id="29">
+                    <property name="title">Work Order Performance</property>
+                    <property name="backgroundColor">auto</property>
+                    <property name="sections">
+                        <section id="30">
+                            <property name="width">26.593406593406595%</property>
+                            <property name="gadgets">
+                                <gadget name="Gadget_a204d7b4-0c5e-4c78-b451-dd6dff1141bc" id="38">
+                                    <property name="height">221px</property>
+                                    <property name="title">Month</property>
+                                    <property name="showTitle">false</property>
+                                    <property name="showBorder">false</property>
+                                    <property name="zIndex">1</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="height">221px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="39">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Source Sans Pro"</property>
+                                            <property name="fontSize">18pt</property>
+                                            <property name="fontWeight">normal</property>
+                                            <property name="fontStyle">normal</property>
+                                            <property name="color">#353535</property>
+                                            <property name="textUnderline">none</property>
+                                        </gadget-caption>
+                                    </property>
+                                    <property name="content">
+                                        <radio-data-selector id="40">
+                                            <property name="externalContentRef">
+                                                <external-element-ref>
+                                                    <property name="sourceFile">^/Report Designs/maximo inventory chart.rptdesign</property>
+                                                    <property name="targetBookmark">FocusDate</property>
+                                                    <property name="isNoValueSupported">false</property>
+                                                </external-element-ref>
+                                            </property>
+                                            <property name="operator">eq</property>
+                                            <property name="controlType">list-box</property>
+                                            <property name="dataType">string</property>
+                                            <simple-property-list name="selectedValues">
+                                                <value>2013-12-25 09:20:22.007</value>
+                                            </simple-property-list>
+                                            <property name="orientation">horizontal</property>
+                                            <property name="autoAdjust">false</property>
+                                            <property name="autoAdjustNumber">2</property>
+                                            <property name="listLimit">1000</property>
+                                        </radio-data-selector>
+                                    </property>
+                                    <property name="observers">
+                                        <event-subscriber>
+                                            <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                            <property name="eventObjects">
+                                                <event-object>
+                                                    <property name="gadget">28c749e9-d67a-45da-a8b6-150dbdc19db1</property>
+                                                    <property name="dirty">false</property>
+                                                </event-object>
+                                            </property>
+                                        </event-subscriber>
+                                        <event-subscriber>
+                                            <property name="eventName">SELECT_EVENT:SEMANTIC_parameter</property>
+                                            <property name="eventObjects">
+                                                <event-object>
+                                                    <property name="appliedTo">FocusDate</property>
+                                                    <property name="gadget">Gadget_25adc822-8008-442f-b8ab-1b362d4d05ee</property>
+                                                    <property name="dirty">false</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="appliedTo">SharedDate</property>
+                                                    <property name="gadget">Gadget_4ffee4b1-6773-49f0-a37c-a2df94430e21</property>
+                                                    <property name="dirty">false</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="appliedTo">SharedDate</property>
+                                                    <property name="gadget">Gadget_eafd1ca8-d829-4682-a559-427d0f2599cf</property>
+                                                    <property name="dirty">false</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="appliedTo">SharedDate</property>
+                                                    <property name="gadget">Gadget_0c4e2743-569f-4dd8-bf52-f554d866c329</property>
+                                                    <property name="dirty">false</property>
+                                                </event-object>
+                                            </property>
+                                        </event-subscriber>
+                                    </property>
+                                </gadget>
+                                <gadget name="Gadget_eafd1ca8-d829-4682-a559-427d0f2599cf" id="48">
+                                    <property name="title">Closed Priority Workload</property>
+                                    <property name="externalGadgetURI">^/Report Designs/Priority Closed.rptdesign</property>
+                                    <property name="showTitle">false</property>
+                                    <property name="showBorder">false</property>
+                                    <property name="zIndex">5</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="caption">
+                                        <gadget-caption id="49">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Source Sans Pro"</property>
+                                            <property name="fontSize">18pt</property>
+                                            <property name="fontWeight">normal</property>
+                                            <property name="fontStyle">normal</property>
+                                            <property name="color">#353535</property>
+                                            <property name="textUnderline">none</property>
+                                        </gadget-caption>
+                                    </property>
+                                    <property name="content">
+                                        <data-view id="50">
+                                            <list-property name="userProperties">
+                                                <structure>
+                                                    <property name="name">showViewerToolbar</property>
+                                                    <property name="type">boolean</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="showViewerToolbar">false</property>
+                                            <property name="gadgetType">viewer</property>
+                                            <property name="externalContentRef">
+                                                <external-element-ref>
+                                                    <property name="sourceFile">^/Report Designs/Priority Closed.rptdesign</property>
+                                                </external-element-ref>
+                                            </property>
+                                            <property name="paramSettings">
+                                                <param-setting>
+                                                    <property name="paramName">SharedDate</property>
+                                                    <expression name="value">Jul 2, 2010 11:15AM</expression>
+                                                    <property name="isHidden">true</property>
+                                                    <expression name="defaultValue" type="javascript">Jul 2, 2010 11:15AM</expression>
+                                                </param-setting>
+                                            </property>
+                                        </data-view>
+                                    </property>
+                                    <property name="subscribeTo">
+                                        <event-subscriber>
+                                            <property name="eventName">SELECT_EVENT:SEMANTIC_parameter</property>
+                                            <property name="eventObjects">
+                                                <event-object>
+                                                    <property name="appliedTo">SharedDate</property>
+                                                    <property name="gadget">Gadget_a204d7b4-0c5e-4c78-b451-dd6dff1141bc</property>
+                                                    <property name="dirty">false</property>
+                                                </event-object>
+                                            </property>
+                                        </event-subscriber>
+                                    </property>
+                                </gadget>
+                                <gadget name="28c749e9-d67a-45da-a8b6-150dbdc19db1" id="32">
+                                    <property name="height">150px</property>
+                                    <property name="zIndex">1</property>
+                                    <property name="isVisible">false</property>
+                                    <property name="height">150px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="34">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Source Sans Pro"</property>
+                                            <property name="fontSize">18pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <property name="color">#000000</property>
+                                        </gadget-caption>
+                                    </property>
+                                    <property name="content">
+                                        <current-selections id="33"/>
+                                    </property>
+                                    <property name="subscribeTo">
+                                        <event-subscriber>
+                                            <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                            <property name="eventObjects">
+                                                <event-object>
+                                                    <property name="gadget">Gadget_a204d7b4-0c5e-4c78-b451-dd6dff1141bc</property>
+                                                    <property name="dirty">false</property>
+                                                </event-object>
+                                            </property>
+                                        </event-subscriber>
+                                    </property>
+                                </gadget>
+                            </property>
+                        </section>
+                        <section id="31">
+                            <property name="width">42.56410256410256%</property>
+                            <property name="gadgets">
+                                <gadget name="Gadget_25adc822-8008-442f-b8ab-1b362d4d05ee" id="35">
+                                    <property name="height">224px</property>
+                                    <property name="title">Inventory Outage vs Oracle Financials  Inventory Spend</property>
+                                    <property name="externalGadgetURI">^/Report Designs/maximo inventory chart.rptdesign</property>
+                                    <property name="showTitle">false</property>
+                                    <property name="showBorder">false</property>
+                                    <property name="zIndex">2</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="height">224px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="36">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Source Sans Pro"</property>
+                                            <property name="fontSize">18pt</property>
+                                            <property name="color">#353535</property>
+                                        </gadget-caption>
+                                    </property>
+                                    <property name="content">
+                                        <data-view id="37">
+                                            <list-property name="userProperties">
+                                                <structure>
+                                                    <property name="name">showViewerToolbar</property>
+                                                    <property name="type">boolean</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="showViewerToolbar">false</property>
+                                            <property name="gadgetType">viewer</property>
+                                            <property name="externalContentRef">
+                                                <external-element-ref>
+                                                    <property name="sourceFile">^/Report Designs/maximo inventory chart.rptdesign</property>
+                                                    <property name="targetBookmark">INVSPEND</property>
+                                                </external-element-ref>
+                                            </property>
+                                            <property name="paramSettings">
+                                                <param-setting>
+                                                    <property name="paramName">FocusDate</property>
+                                                    <expression name="value">2014-03-07 12:55:53.483</expression>
+                                                    <property name="isHidden">true</property>
+                                                    <expression name="defaultValue" type="javascript">2014-03-07 12:55:53.483</expression>
+                                                </param-setting>
+                                            </property>
+                                        </data-view>
+                                    </property>
+                                    <property name="subscribeTo">
+                                        <event-subscriber>
+                                            <property name="eventName">SELECT_EVENT:SEMANTIC_parameter</property>
+                                            <property name="eventObjects">
+                                                <event-object>
+                                                    <property name="appliedTo">FocusDate</property>
+                                                    <property name="gadget">Gadget_a204d7b4-0c5e-4c78-b451-dd6dff1141bc</property>
+                                                    <property name="dirty">false</property>
+                                                </event-object>
+                                            </property>
+                                        </event-subscriber>
+                                    </property>
+                                </gadget>
+                                <gadget name="Gadget_4ffee4b1-6773-49f0-a37c-a2df94430e21" id="42">
+                                    <property name="title">Pareto Failure Analysis</property>
+                                    <property name="externalGadgetURI">^/Report Designs/ParetoChart.rptdesign</property>
+                                    <property name="showTitle">false</property>
+                                    <property name="showBorder">false</property>
+                                    <property name="zIndex">3</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="caption">
+                                        <gadget-caption id="43">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Source Sans Pro"</property>
+                                            <property name="fontSize">18pt</property>
+                                            <property name="color">#353535</property>
+                                        </gadget-caption>
+                                    </property>
+                                    <property name="content">
+                                        <data-view id="44">
+                                            <list-property name="userProperties">
+                                                <structure>
+                                                    <property name="name">showViewerToolbar</property>
+                                                    <property name="type">boolean</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="showViewerToolbar">false</property>
+                                            <property name="gadgetType">viewer</property>
+                                            <property name="externalContentRef">
+                                                <external-element-ref>
+                                                    <property name="sourceFile">^/Report Designs/ParetoChart.rptdesign</property>
+                                                </external-element-ref>
+                                            </property>
+                                            <property name="paramSettings">
+                                                <param-setting>
+                                                    <property name="paramName">SharedDate</property>
+                                                    <expression name="value">Jul 1, 2010 11:15 AM</expression>
+                                                    <property name="isHidden">true</property>
+                                                    <expression name="defaultValue" type="javascript">Jul 1, 2010 11:15 AM</expression>
+                                                </param-setting>
+                                            </property>
+                                        </data-view>
+                                    </property>
+                                    <property name="subscribeTo">
+                                        <event-subscriber>
+                                            <property name="eventName">SELECT_EVENT:SEMANTIC_parameter</property>
+                                            <property name="eventObjects">
+                                                <event-object>
+                                                    <property name="appliedTo">SharedDate</property>
+                                                    <property name="gadget">Gadget_a204d7b4-0c5e-4c78-b451-dd6dff1141bc</property>
+                                                    <property name="dirty">false</property>
+                                                </event-object>
+                                            </property>
+                                        </event-subscriber>
+                                    </property>
+                                </gadget>
+                            </property>
+                        </section>
+                        <section id="41">
+                            <property name="width">30.842490842490843%</property>
+                            <property name="gadgets">
+                                <gadget name="Gadget_0c4e2743-569f-4dd8-bf52-f554d866c329" id="45">
+                                    <property name="height">333px</property>
+                                    <property name="title">Outages</property>
+                                    <property name="externalGadgetURI">^/Report Designs/Outage Chart.rptdesign</property>
+                                    <property name="showTitle">false</property>
+                                    <property name="showBorder">false</property>
+                                    <property name="zIndex">4</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="height">333px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="46">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Source Sans Pro"</property>
+                                            <property name="fontSize">18pt</property>
+                                            <property name="fontWeight">normal</property>
+                                            <property name="fontStyle">normal</property>
+                                            <property name="color">#353535</property>
+                                            <property name="textUnderline">none</property>
+                                        </gadget-caption>
+                                    </property>
+                                    <property name="content">
+                                        <data-view id="47">
+                                            <list-property name="userProperties">
+                                                <structure>
+                                                    <property name="name">showViewerToolbar</property>
+                                                    <property name="type">boolean</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="showViewerToolbar">false</property>
+                                            <property name="gadgetType">viewer</property>
+                                            <property name="externalContentRef">
+                                                <external-element-ref>
+                                                    <property name="sourceFile">^/Report Designs/Outage Chart.rptdesign</property>
+                                                </external-element-ref>
+                                            </property>
+                                            <property name="paramSettings">
+                                                <param-setting>
+                                                    <property name="paramName">SharedDate</property>
+                                                    <expression name="value">Jul 2, 2010 11:15AM</expression>
+                                                    <property name="isHidden">true</property>
+                                                    <expression name="defaultValue" type="javascript">Jul 2, 2010 11:15AM</expression>
+                                                </param-setting>
+                                            </property>
+                                        </data-view>
+                                    </property>
+                                    <property name="subscribeTo">
+                                        <event-subscriber>
+                                            <property name="eventName">SELECT_EVENT:SEMANTIC_parameter</property>
+                                            <property name="eventObjects">
+                                                <event-object>
+                                                    <property name="appliedTo">SharedDate</property>
+                                                    <property name="gadget">Gadget_a204d7b4-0c5e-4c78-b451-dd6dff1141bc</property>
+                                                    <property name="dirty">false</property>
+                                                </event-object>
+                                            </property>
+                                        </event-subscriber>
+                                    </property>
+                                </gadget>
+                                <gadget name="Gadget_b3229229-4565-4d70-b75a-f20074a3a4b3" id="51">
+                                    <property name="title">Work Order Backlog</property>
+                                    <property name="externalGadgetURI">^/Report Designs/WOTXT.rptdesign</property>
+                                    <property name="showTitle">false</property>
+                                    <property name="showBorder">false</property>
+                                    <property name="zIndex">6</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="caption">
+                                        <gadget-caption id="52">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Source Sans Pro"</property>
+                                            <property name="fontSize">18pt</property>
+                                            <property name="fontWeight">normal</property>
+                                            <property name="fontStyle">normal</property>
+                                            <property name="color">#353535</property>
+                                            <property name="textUnderline">none</property>
+                                        </gadget-caption>
+                                    </property>
+                                    <property name="content">
+                                        <data-view id="53">
+                                            <list-property name="userProperties">
+                                                <structure>
+                                                    <property name="name">showViewerToolbar</property>
+                                                    <property name="type">boolean</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="showViewerToolbar">false</property>
+                                            <property name="gadgetType">viewer</property>
+                                            <property name="externalContentRef">
+                                                <external-element-ref>
+                                                    <property name="sourceFile">^/Report Designs/WOTXT.rptdocument</property>
+                                                </external-element-ref>
+                                            </property>
+                                            <property name="paramSettings">
+                                                <param-setting>
+                                                    <property name="paramName">SharedDate</property>
+                                                    <expression name="value">Jul 2, 2010 11:15AM</expression>
+                                                    <property name="isHidden">true</property>
+                                                    <expression name="defaultValue" type="javascript">Jul 2, 2010 11:15AM</expression>
+                                                </param-setting>
+                                            </property>
+                                        </data-view>
+                                    </property>
+                                </gadget>
+                            </property>
+                        </section>
+                    </property>
+                </tab-element>
+            </property>
+        </dashboard>
+    </property>
+</report>

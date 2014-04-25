@@ -1,0 +1,8 @@
+CurrentTranslationLocale=en_US
+DependencyManagerState=<?xml version\="1.0" encoding\="UTF-8" standalone\="yes"?>\n<state>\n    <compilationUnit name\="/Data Sources/Maximo Database Connection/dbo.administration.sma">\n        <dependent>/Maximo_Elana/Information Objects/Administrator.iob</dependent>\n    </compilationUnit>\n    <compilationUnit name\="/Data Sources/Maximo Database Connection/Work Order Map.sma">\n        <dependent>/Maximo_Elana/Information Objects/Closed Work Orders.iob</dependent>\n    </compilationUnit>\n</state>\n
+DevelopmentServerLocation=/development/
+DevelopmentServerProfileName=1
+PublishServerLocation=/
+PublishServerProfileName=1
+SavedPublishPaths=rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAACdAABMXQAAS90AAEvdAAVL0luZm9ybWF0aW9uIE9iamVjdHMveA\=\=
+eclipse.preferences.version=1

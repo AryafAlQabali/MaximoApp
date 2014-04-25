@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="cnt" id="92">
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">15</value>
+            </simple-property-list>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="MonthName" id="93">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">June</value>
+            </simple-property-list>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="7">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.actuate.jdbc.sqlserver.SQLServerDriver</property>
+            <property name="odaURL">jdbc:actuate:sqlserver://localhost;databasename=MAXTBL</property>
+            <property name="odaUser">sa</property>
+            <encrypted-property name="odaPassword" encryptionID="jce">bc3c04e2fedfc17e</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Work Order Detail Data Set" id="8">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">seq</property>
+                    <text-property name="displayName">seq</text-property>
+                    <text-property name="heading">seq</text-property>
+                    <property name="horizontalAlign">justify</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Region</property>
+                    <text-property name="displayName">Region</text-property>
+                    <text-property name="heading">Region</text-property>
+                    <property name="horizontalAlign">justify</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Facility</property>
+                    <text-property name="displayName">Facility</text-property>
+                    <text-property name="heading">Facility</text-property>
+                    <property name="horizontalAlign">justify</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Work Order Number</property>
+                    <text-property name="displayName">Work Order Number</text-property>
+                    <text-property name="heading">Work Order Number</text-property>
+                    <property name="horizontalAlign">justify</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Supervisor</property>
+                    <text-property name="displayName">Supervisor</text-property>
+                    <text-property name="heading">Supervisor</text-property>
+                    <property name="horizontalAlign">justify</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Phone Ext</property>
+                    <text-property name="displayName">Phone Ext</text-property>
+                    <text-property name="heading">Phone Ext</text-property>
+                    <property name="horizontalAlign">justify</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Asset Tag</property>
+                    <text-property name="displayName">Asset Tag</text-property>
+                    <text-property name="heading">Asset Tag</text-property>
+                    <property name="horizontalAlign">justify</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Asset Description</property>
+                    <text-property name="displayName">Asset Description</text-property>
+                    <text-property name="heading">Asset Description</text-property>
+                    <property name="horizontalAlign">justify</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Estimated Hours</property>
+                    <text-property name="displayName">Estimated Hours</text-property>
+                    <text-property name="heading">Estimated Hours</text-property>
+                    <property name="horizontalAlign">justify</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Actual Hours</property>
+                    <text-property name="displayName">Actual Hours</text-property>
+                    <text-property name="heading">Actual Hours</text-property>
+                    <property name="horizontalAlign">justify</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Priority</property>
+                    <text-property name="displayName">Priority</text-property>
+                    <text-property name="heading">Priority</text-property>
+                    <property name="horizontalAlign">justify</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Labor and Material Cost</property>
+                    <text-property name="displayName">Labor and Material Cost</text-property>
+                    <text-property name="heading">Labor and Material Cost</text-property>
+                    <property name="horizontalAlign">justify</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Category</property>
+                    <text-property name="displayName">Category</text-property>
+                    <text-property name="heading">Category</text-property>
+                    <property name="horizontalAlign">justify</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">rowcnt</property>
+                    <property name="paramName">cnt</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">6</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="javascript">20</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">seq</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Region</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Facility</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Work Order Number</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Supervisor</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Phone Ext</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Asset Tag</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Asset Description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Estimated Hours</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Actual Hours</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Priority</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">Labor and Material Cost</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">Category</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">seq</property>
+                    <property name="nativeName">seq</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Region</property>
+                    <property name="nativeName">Region</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Facility</property>
+                    <property name="nativeName">Facility</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Work Order Number</property>
+                    <property name="nativeName">Work Order Number</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Supervisor</property>
+                    <property name="nativeName">Supervisor</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Phone Ext</property>
+                    <property name="nativeName">Phone Ext</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Asset Tag</property>
+                    <property name="nativeName">Asset Tag</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Asset Description</property>
+                    <property name="nativeName">Asset Description</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Estimated Hours</property>
+                    <property name="nativeName">Estimated Hours</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Actual Hours</property>
+                    <property name="nativeName">Actual Hours</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">Priority</property>
+                    <property name="nativeName">Priority</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">Labor and Material Cost</property>
+                    <property name="nativeName">Labor and Material Cost</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">Category</property>
+                    <property name="nativeName">Category</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select  seq, Region, Facility, "Work Order Number", Supervisor, "Phone Ext", "Asset Tag", "Asset Description",
+                  "Estimated Hours", "Actual Hours", Priority, "Labor and Material Cost", Category
+   from workord where seq < ? +1]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>1.0</Version>
+  <design:DataSetParameters>
+    <design:parameterDefinitions>
+      <design:inOutMode>In</design:inOutMode>
+      <design:attributes>
+        <design:name></design:name>
+        <design:position>1</design:position>
+        <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+        <design:precision>15</design:precision>
+        <design:scale>0</design:scale>
+        <design:nullability>Nullable</design:nullability>
+      </design:attributes>
+      <design:inputAttributes>
+        <design:elementAttributes>
+          <design:optional>true</design:optional>
+        </design:elementAttributes>
+      </design:inputAttributes>
+    </design:parameterDefinitions>
+  </design:DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>t1</design:name>
+            <design:position>1</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>t1</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>t1</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>t2</design:name>
+            <design:position>2</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>t2</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>t2</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>t3</design:name>
+            <design:position>3</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>t3</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>t3</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>t4</design:name>
+            <design:position>4</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>t4</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>t4</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>t5</design:name>
+            <design:position>5</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>t5</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>t5</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>t6</design:name>
+            <design:position>6</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>t6</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>t6</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>t7</design:name>
+            <design:position>7</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>t7</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>t7</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>t8</design:name>
+            <design:position>8</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>t8</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>t8</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n1</design:name>
+            <design:position>9</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n1</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n1</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n2</design:name>
+            <design:position>10</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n2</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n2</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n3</design:name>
+            <design:position>11</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n3</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n3</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n4</design:name>
+            <design:position>12</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n4</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n4</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n5</design:name>
+            <design:position>13</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n5</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n5</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n6</design:name>
+            <design:position>14</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n6</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n6</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n7</design:name>
+            <design:position>15</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n7</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n7</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n8</design:name>
+            <design:position>16</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n8</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n8</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n9</design:name>
+            <design:position>17</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n9</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n9</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="height">12in</property>
+            <property name="width">14in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="textAlign">left</property>
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="107">
+            <property name="width">100%</property>
+            <property name="dataSet">Work Order Detail Data Set</property>
+            <property name="theme">ThemesReportItems3.Modern Table</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">seq</property>
+                    <expression name="expression" type="javascript">dataSetRow["seq"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Region</property>
+                    <expression name="expression" type="javascript">dataSetRow["Region"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Facility</property>
+                    <expression name="expression" type="javascript">dataSetRow["Facility"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Work Order Number</property>
+                    <expression name="expression" type="javascript">dataSetRow["Work Order Number"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Supervisor</property>
+                    <expression name="expression" type="javascript">dataSetRow["Supervisor"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Phone Ext</property>
+                    <expression name="expression" type="javascript">dataSetRow["Phone Ext"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Asset Tag</property>
+                    <expression name="expression" type="javascript">dataSetRow["Asset Tag"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Asset Description</property>
+                    <expression name="expression" type="javascript">dataSetRow["Asset Description"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Estimated Hours</property>
+                    <expression name="expression" type="javascript">dataSetRow["Estimated Hours"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Actual Hours</property>
+                    <expression name="expression" type="javascript">dataSetRow["Actual Hours"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Priority</property>
+                    <expression name="expression" type="javascript">dataSetRow["Priority"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Labor and Material Cost</property>
+                    <expression name="expression" type="javascript">dataSetRow["Labor and Material Cost"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Category</property>
+                    <expression name="expression" type="javascript">dataSetRow["Category"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="174">
+                <property name="width">0.8645833333333334in</property>
+            </column>
+            <column id="175">
+                <property name="width">0.8645833333333334in</property>
+            </column>
+            <column id="176">
+                <property name="width">0.8645833333333334in</property>
+            </column>
+            <column id="178">
+                <property name="width">0.6666666666666666in</property>
+            </column>
+            <column id="179">
+                <property name="width">0.8125in</property>
+            </column>
+            <column id="180">
+                <property name="width">2.0520833333333335in</property>
+            </column>
+            <column id="181">
+                <property name="width">0.75in</property>
+            </column>
+            <column id="182">
+                <property name="width">0.625in</property>
+            </column>
+            <column id="183">
+                <property name="width">0.5416666666666666in</property>
+            </column>
+            <column id="210">
+                <property name="width">0.5520833333333334in</property>
+            </column>
+            <column id="219">
+                <property name="width">0.8541666666666666in</property>
+            </column>
+            <header>
+                <row id="223">
+                    <property name="verticalAlign">middle</property>
+                    <property name="height">0.448in</property>
+                    <cell id="224">
+                        <property name="colSpan">11</property>
+                        <property name="rowSpan">1</property>
+                        <property name="verticalAlign">middle</property>
+                        <text-data id="106">
+                            <property name="fontFamily">"Verdana"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">center</property>
+                            <expression name="valueExpr">params["cnt"].value+'  Work Orders Closed in '+params["MonthName"].value</expression>
+                            <property name="contentType">html</property>
+                        </text-data>
+                    </cell>
+                </row>
+                <row id="108">
+                    <property name="verticalAlign">middle</property>
+                    <property name="height">0.625in</property>
+                    <cell id="109">
+                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="color">black</property>
+                        <property name="verticalAlign">middle</property>
+                        <label id="184">
+                            <property name="fontSize">8pt</property>
+                            <property name="color">#666666</property>
+                            <text-property name="text">Region</text-property>
+                        </label>
+                    </cell>
+                    <cell id="110">
+                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="color">black</property>
+                        <label id="186">
+                            <property name="fontSize">8pt</property>
+                            <property name="color">#666666</property>
+                            <text-property name="text">Facility</text-property>
+                        </label>
+                    </cell>
+                    <cell id="111">
+                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="color">black</property>
+                        <label id="188">
+                            <property name="fontSize">8pt</property>
+                            <property name="color">#666666</property>
+                            <text-property name="text">Supervisor</text-property>
+                        </label>
+                    </cell>
+                    <cell id="113">
+                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="color">black</property>
+                        <label id="192">
+                            <property name="fontSize">8pt</property>
+                            <property name="color">#666666</property>
+                            <text-property name="text">Work Order</text-property>
+                        </label>
+                    </cell>
+                    <cell id="114">
+                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="color">black</property>
+                        <label id="194">
+                            <property name="fontSize">8pt</property>
+                            <property name="color">#666666</property>
+                            <text-property name="text">Asset Tag</text-property>
+                        </label>
+                    </cell>
+                    <cell id="115">
+                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="color">black</property>
+                        <label id="196">
+                            <property name="fontSize">8pt</property>
+                            <property name="color">#666666</property>
+                            <text-property name="text">Asset Description</text-property>
+                        </label>
+                    </cell>
+                    <cell id="116">
+                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="color">black</property>
+                        <label id="198">
+                            <property name="fontSize">8pt</property>
+                            <property name="color">#666666</property>
+                            <property name="textAlign">right</property>
+                            <text-property name="text">Estimated Hours</text-property>
+                        </label>
+                    </cell>
+                    <cell id="117">
+                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="color">black</property>
+                        <label id="200">
+                            <property name="fontSize">8pt</property>
+                            <property name="color">#666666</property>
+                            <property name="textAlign">right</property>
+                            <text-property name="text">Actual Hours</text-property>
+                        </label>
+                    </cell>
+                    <cell id="118">
+                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="color">black</property>
+                        <label id="202">
+                            <property name="fontSize">8pt</property>
+                            <property name="color">#666666</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Priority</text-property>
+                        </label>
+                    </cell>
+                    <cell id="204">
+                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="color">black</property>
+                        <label id="211">
+                            <property name="fontSize">8pt</property>
+                            <property name="color">#666666</property>
+                            <property name="textAlign">right</property>
+                            <text-property name="text">Labor &amp; Material </text-property>
+                        </label>
+                    </cell>
+                    <cell id="213">
+                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="color">black</property>
+                        <label id="221">
+                            <property name="fontSize">8pt</property>
+                            <property name="color">#666666</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Category</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="119">
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <property name="backgroundColor">#ECECFF</property>
+                            <expression name="testExpr" type="javascript">row.__rownum%2</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">1</value>
+                            </simple-property-list>
+                        </structure>
+                    </list-property>
+                    <cell id="120">
+                        <data id="185">
+                            <property name="backgroundColor">white</property>
+                            <property name="textAlign">justify</property>
+                            <property name="whiteSpace">nowrap</property>
+                            <property name="resultSetColumn">Region</property>
+                        </data>
+                    </cell>
+                    <cell id="121">
+                        <data id="187">
+                            <property name="backgroundColor">white</property>
+                            <property name="textAlign">justify</property>
+                            <property name="whiteSpace">nowrap</property>
+                            <property name="resultSetColumn">Facility</property>
+                        </data>
+                    </cell>
+                    <cell id="122">
+                        <data id="189">
+                            <property name="textAlign">justify</property>
+                            <property name="whiteSpace">nowrap</property>
+                            <property name="resultSetColumn">Supervisor</property>
+                        </data>
+                    </cell>
+                    <cell id="124">
+                        <data id="193">
+                            <property name="textAlign">justify</property>
+                            <property name="whiteSpace">nowrap</property>
+                            <property name="resultSetColumn">Work Order Number</property>
+                        </data>
+                    </cell>
+                    <cell id="125">
+                        <data id="195">
+                            <property name="textAlign">justify</property>
+                            <property name="whiteSpace">nowrap</property>
+                            <property name="resultSetColumn">Asset Tag</property>
+                        </data>
+                    </cell>
+                    <cell id="126">
+                        <data id="197">
+                            <property name="textAlign">justify</property>
+                            <property name="whiteSpace">nowrap</property>
+                            <property name="resultSetColumn">Asset Description</property>
+                        </data>
+                    </cell>
+                    <cell id="127">
+                        <data id="199">
+                            <property name="textAlign">right</property>
+                            <property name="whiteSpace">nowrap</property>
+                            <property name="resultSetColumn">Estimated Hours</property>
+                        </data>
+                    </cell>
+                    <cell id="128">
+                        <data id="201">
+                            <property name="textAlign">right</property>
+                            <property name="whiteSpace">nowrap</property>
+                            <property name="resultSetColumn">Actual Hours</property>
+                        </data>
+                    </cell>
+                    <cell id="129">
+                        <data id="203">
+                            <property name="textAlign">center</property>
+                            <property name="whiteSpace">nowrap</property>
+                            <property name="resultSetColumn">Priority</property>
+                        </data>
+                    </cell>
+                    <cell id="205">
+                        <data id="212">
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="whiteSpace">nowrap</property>
+                            <property name="resultSetColumn">Labor and Material Cost</property>
+                        </data>
+                    </cell>
+                    <cell id="214">
+                        <data id="222">
+                            <property name="textAlign">center</property>
+                            <property name="whiteSpace">nowrap</property>
+                            <property name="resultSetColumn">Category</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+    <list-property name="images">
+        <structure>
+            <property name="name">ScreenHunter_01 Aug. 05 08.48.gif</property>
+            <property name="type">image/gif</property>
+            <property name="data">
+                R0lGODlhKAAmAHAAACH5BAgAAP8ALAAAAAAoACYAh2VhWlxZT1pXUlxbVW5sZnZ0b4aEfZeUkpKOg5WS
+                iJyVjpeWlaKdmaOjm6aimaihnaqnqaWkoqqpoq6tp6urraysrrq2rrSzs7W1tre3uby5s7q5urq6vL29
+                vb+/v76+wcG8tcTBvMLCvsfGxsLCxcXExMfHx8fHyczFxcnHzMvLx8rKysvLy83Nzc3Nz87Ozs/P0dvX
+                z9LR09PT09PS1dXU1dXV19fX19fW2NnZ2tvb29rZ3d3d3d3d39zb4t7e4N/e4+Le2ubk2uLi4uLh5uPj
+                5eXl5eTk5ufn5+bn6ebq7evl6Orp5ert5+zq5unp6ujp6+vr6+nq7uvr7e7q6e3r7ezs6u7t6+/v6u3t
+                7ezs7uzu7e/v7+rs8u7t8u7u8O7w7+7y8e/y9fLt6PLv7vHv9vDx6vHx7vbz7/Hx8fDx8/Hz8PPz8fLy
+                8vHx9fLy9PL18/L19fb18vX19fX19/T29fX39vf29Pf39/P0+PP3+Pb3+fn18vn39fj3/fn68Pn59vn6
+                9f369v/99vj4+fn5+/v7+/r7/fn8+/39+v//+/39/fz8/v7+/P///wAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAj+AA0ZWkSQYCE7dgw5WjRQIENCCgtKnEjRIUGBjjI6MgSRUEaCCyEK
+                HEmypEmGAg/iSZnRUKGHCk3KnJlypEFChebgLNRQJE2ZKG0SGlroo0aXNX/KXOiS5yJCixzhaTOkRIsV
+                OexInRNUKUmmOA3ZKRrFBIsoc9oUiiKjRhupXk868ojT0aEjJNS80TLEB5AjTw6ZMOKo0KE9hZ92lXuo
+                8CE6R04UOuKCRREiSWhcsJFmRhGPhxhB5PkzKiNGoQl1OJQjQ5EkSXj8OELowws8LJ7YPTS0aaHfwIFn
+                PC0ag5YiHNQc+ZJEy5svOeicOPFExhtChwp1DM696KLTjqb+fCiUAUaRJ2/s/taCIwcFOiuiGD7Icaj9
+                +x4XhXaEo8YTDj8MMZxHhujUAwYy2JDEIbyNpR1+92XUGCMfHGECCTho4QhqjrQRlRY/mPBBET/gBOGJ
+                Hm244QVDtDDiEdptxNAebwwhAwlH0PDGHh3hgaJ9G23UwRErfABEEXYdtccXeJ1AxA5qMCIGIYnI8SNE
+                QS7yAg5JZGBDFFoweJEaWiRxgQs9DLGHHojAYUciV35EEBIXOFLBD0V8gZgjuqnxxA4ViPdDm3U4koYd
+                eCSq6KJyclTBETCs8EUUSXwxxxxGOLeBC1p4YAcggLBxBiGLlproQgsV1dohLsBwBCP+WqCFRxIkfKAG
+                BkgEoggWgQDSxhsIBSusHRLF1EEJePxQgw066HBDDiS08AUNH4iwQAmKOCHHHn4MO2xUIGGEwQZIRIFE
+                GlwYwcMUR2DQghoNLDCABYr0MQUjl+ar7xwtRfVSUStg4MELOTQLwwclRJBEDkMMokEAIQCyRx777ruQ
+                RBcbEkUNJXjQgQcqsHDFDAa8wAcVilwgAL1jODKHHXWsAYgcfFx6cbFRzdVGGmdYkUUjd6DwAAhLAHED
+                IBcMMMEgWVRRCCJgzHHGHTZP1NJADOHBBR6OGHHHGA5YcAEKHZhghQQBaFAveoVYykbVFWGd0x57qEHI
+                HYIEgYD+BQ9scAEHQ0wgAAiDkDGHFozAsUYbb90sI6oZta3GIW1YgQYfYyTgQAERLEBBDhEIEIIgc3wB
+                bBqMywnuRyP9lkUaddixhhxoCIGABAQcEEEEPjAggAZ8oHFF3ak7bnVGjcgBBhhpZAEIGXyYYQDuB0AQ
+                AQ6hE85EFX4UD5Kcqgdyhx1bHDJHFWy4wTMCDRRwwAcVyMAAATEI8kYZxWukv0Yg5cT4/1pgwx+cgAAH
+                EGABKeDACCYgAjbkoQtpSMP+JnixheAhgm3gQhTogIQgMEEIBogAARjAgunxAQtTUJ8EKai/gmwkgxlE
+                Qg/eMAMbqEAEBmhAAAygACb0gQmDjTgDF1bIQtVZcGdcyAIYoAAFIMRGBQ1ggAKCwAcrcGENTeACF4rI
+                P3AxZA5ZyEIbtvAFN0hBCmlowh8GIYc+PCEPeggDHLTIRfCBhBBhZJwavLAHKYDBCmZgAheSIAYlKEEM
+                UqBjHUESrjkkkQtIaMPyuGCHJ3hBDV/Agxyz8AUtBgQAOw==
+</property>
+        </structure>
+    </list-property>
+</report>

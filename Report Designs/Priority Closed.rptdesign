@@ -1,0 +1,1443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="units">in</property>
+    <property name="theme">Maximo.defaultTheme</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">Maximo.rptlibrary</property>
+            <property name="namespace">Maximo</property>
+        </structure>
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="SharedDate" id="66">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">Jul 2, 2010 11:15AM</value>
+            </simple-property-list>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="100"
+ extends="Maximo.Data Source">
+            <property name="odaDriverClass">com.actuate.jdbc.sqlserver.SQLServerDriver</property>
+            <property name="odaURL">jdbc:actuate:sqlserver://localhost;databasename=MAXTBL</property>
+            <property name="odaUser">sa</property>
+            <encrypted-property name="odaPassword" encryptionID="jce">bc3c04e2fedfc17e</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Priority closed Data Set" id="8">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">t1</property>
+                    <property name="analysis">attribute</property>
+                    <text-property name="displayName">t1</text-property>
+                    <text-property name="heading">t1</text-property>
+                    <property name="displayLength">50</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">t2</property>
+                    <property name="analysis">attribute</property>
+                    <text-property name="displayName">t2</text-property>
+                    <text-property name="heading">t2</text-property>
+                    <property name="displayLength">50</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">t3</property>
+                    <property name="analysis">attribute</property>
+                    <text-property name="displayName">t3</text-property>
+                    <text-property name="heading">t3</text-property>
+                    <property name="displayLength">50</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">t4</property>
+                    <property name="analysis">attribute</property>
+                    <text-property name="displayName">t4</text-property>
+                    <text-property name="heading">t4</text-property>
+                    <property name="displayLength">50</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">t5</property>
+                    <property name="analysis">attribute</property>
+                    <text-property name="displayName">t5</text-property>
+                    <text-property name="heading">t5</text-property>
+                    <property name="displayLength">50</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">t6</property>
+                    <property name="analysis">attribute</property>
+                    <text-property name="displayName">t6</text-property>
+                    <text-property name="heading">t6</text-property>
+                    <property name="displayLength">50</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">t7</property>
+                    <property name="analysis">attribute</property>
+                    <text-property name="displayName">t7</text-property>
+                    <text-property name="heading">t7</text-property>
+                    <property name="displayLength">50</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">t8</property>
+                    <property name="analysis">attribute</property>
+                    <text-property name="displayName">t8</text-property>
+                    <text-property name="heading">t8</text-property>
+                    <property name="displayLength">50</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">t9</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">t9</text-property>
+                    <text-property name="heading">t9</text-property>
+                    <property name="displayLength">50</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">t10</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">t10</text-property>
+                    <text-property name="heading">t10</text-property>
+                    <property name="displayLength">50</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">n1</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">n1</text-property>
+                    <text-property name="heading">n1</text-property>
+                    <property name="displayLength">22</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">n2</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">n2</text-property>
+                    <text-property name="heading">n2</text-property>
+                    <property name="displayLength">22</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">n3</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">n3</text-property>
+                    <text-property name="heading">n3</text-property>
+                    <property name="displayLength">22</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">n4</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">n4</text-property>
+                    <text-property name="heading">n4</text-property>
+                    <property name="displayLength">22</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">n5</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">n5</text-property>
+                    <text-property name="heading">n5</text-property>
+                    <property name="displayLength">22</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">n6</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">n6</text-property>
+                    <text-property name="heading">n6</text-property>
+                    <property name="displayLength">22</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">n7</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">n7</text-property>
+                    <text-property name="heading">n7</text-property>
+                    <property name="displayLength">22</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">n8</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">n8</text-property>
+                    <text-property name="heading">n8</text-property>
+                    <property name="displayLength">22</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">n9</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">n9</text-property>
+                    <text-property name="heading">n9</text-property>
+                    <property name="displayLength">22</property>
+                    <property name="horizontalAlign">justify</property>
+                    <property name="wordWrap">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">n10</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">n10</text-property>
+                    <text-property name="heading">n10</text-property>
+                    <property name="horizontalAlign">justify</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">SharedDate</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="javascript">7</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">t1</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">t2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">t3</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">t4</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">t5</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">t6</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">t7</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">t8</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">t9</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">t10</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">n1</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">n2</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">n3</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">n4</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">n5</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">n6</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">n7</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">n8</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">n9</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">n10</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">t1</property>
+                    <property name="nativeName">t1</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">t2</property>
+                    <property name="nativeName">t2</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">t3</property>
+                    <property name="nativeName">t3</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">t4</property>
+                    <property name="nativeName">t4</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">t5</property>
+                    <property name="nativeName">t5</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">t6</property>
+                    <property name="nativeName">t6</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">t7</property>
+                    <property name="nativeName">t7</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">t8</property>
+                    <property name="nativeName">t8</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">t9</property>
+                    <property name="nativeName">t9</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">t10</property>
+                    <property name="nativeName">t10</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">n1</property>
+                    <property name="nativeName">n1</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">n2</property>
+                    <property name="nativeName">n2</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">n3</property>
+                    <property name="nativeName">n3</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">n4</property>
+                    <property name="nativeName">n4</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">n5</property>
+                    <property name="nativeName">n5</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">n6</property>
+                    <property name="nativeName">n6</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">n7</property>
+                    <property name="nativeName">n7</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">n8</property>
+                    <property name="nativeName">n8</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">n9</property>
+                    <property name="nativeName">n9</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">n10</property>
+                    <property name="nativeName">n10</property>
+                    <property name="dataType">float</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select t1, t2, t3, t4, t5, t6, t7, t8, t9, t10,
+       n1, n2, n3, n4, n5, n6, n7, n8, n9, n10
+  from maxdata
+        where id = 'worko' and seq = month(?)]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>1.0</Version>
+  <design:DataSetParameters>
+    <design:parameterDefinitions>
+      <design:inOutMode>In</design:inOutMode>
+      <design:attributes>
+        <design:name></design:name>
+        <design:position>1</design:position>
+        <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+        <design:precision>10</design:precision>
+        <design:scale>0</design:scale>
+        <design:nullability>Nullable</design:nullability>
+      </design:attributes>
+      <design:inputAttributes>
+        <design:elementAttributes>
+          <design:optional>true</design:optional>
+        </design:elementAttributes>
+      </design:inputAttributes>
+    </design:parameterDefinitions>
+  </design:DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>t1</design:name>
+            <design:position>1</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>t1</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>t1</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>t2</design:name>
+            <design:position>2</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>t2</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>t2</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>t3</design:name>
+            <design:position>3</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>t3</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>t3</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>t4</design:name>
+            <design:position>4</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>t4</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>t4</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>t5</design:name>
+            <design:position>5</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>t5</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>t5</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>t6</design:name>
+            <design:position>6</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>t6</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>t6</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>t7</design:name>
+            <design:position>7</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>t7</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>t7</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>t8</design:name>
+            <design:position>8</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>t8</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>t8</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n1</design:name>
+            <design:position>9</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n1</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n1</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n2</design:name>
+            <design:position>10</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n2</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n2</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n3</design:name>
+            <design:position>11</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n3</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n3</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n4</design:name>
+            <design:position>12</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n4</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n4</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n5</design:name>
+            <design:position>13</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n5</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n5</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n6</design:name>
+            <design:position>14</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n6</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n6</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n7</design:name>
+            <design:position>15</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n7</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n7</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n8</design:name>
+            <design:position>16</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n8</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n8</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>n9</design:name>
+            <design:position>17</design:position>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>n9</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>n9</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="68">
+            <property name="height">3.8854166666666665in</property>
+            <property name="width">2.3333333333333335in</property>
+            <property name="dataSet">Priority closed Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">t1</property>
+                    <expression name="expression" type="javascript">dataSetRow["t1"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">t2</property>
+                    <expression name="expression" type="javascript">dataSetRow["t2"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">t3</property>
+                    <expression name="expression" type="javascript">dataSetRow["t3"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">t4</property>
+                    <expression name="expression" type="javascript">dataSetRow["t4"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">t5</property>
+                    <expression name="expression" type="javascript">dataSetRow["t5"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">t6</property>
+                    <expression name="expression" type="javascript">dataSetRow["t6"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">t7</property>
+                    <expression name="expression" type="javascript">dataSetRow["t7"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">t8</property>
+                    <expression name="expression" type="javascript">dataSetRow["t8"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">t9</property>
+                    <expression name="expression" type="javascript">dataSetRow["t9"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">t10</property>
+                    <expression name="expression" type="javascript">dataSetRow["t10"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">n1</property>
+                    <expression name="expression" type="javascript">dataSetRow["n1"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">n2</property>
+                    <expression name="expression" type="javascript">dataSetRow["n2"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">n3</property>
+                    <expression name="expression" type="javascript">dataSetRow["n3"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">n4</property>
+                    <expression name="expression" type="javascript">dataSetRow["n4"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">n5</property>
+                    <expression name="expression" type="javascript">dataSetRow["n5"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">n6</property>
+                    <expression name="expression" type="javascript">dataSetRow["n6"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">n7</property>
+                    <expression name="expression" type="javascript">dataSetRow["n7"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">n8</property>
+                    <expression name="expression" type="javascript">dataSetRow["n8"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">n9</property>
+                    <expression name="expression" type="javascript">dataSetRow["n9"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">n10</property>
+                    <expression name="expression" type="javascript">dataSetRow["n10"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+            </list-property>
+            <expression name="bookmark" type="javascript">'pri'</expression>
+            <column id="69">
+                <property name="width">2.3333333333333335in</property>
+            </column>
+            <row id="78">
+                <property name="height">0.34in</property>
+                <cell id="79">
+                    <property name="verticalAlign">bottom</property>
+                    <text-data id="82">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">8pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <expression name="valueExpr">'Priority 1 Work Orders Closed in '+row["t10"]</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+            <row id="70">
+                <property name="height">0.7395833333333334in</property>
+                <cell id="71">
+                    <extended-item extensionName="FlashGadgets" id="67">
+                        <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="1.0">
+ <Gadget backgroundColor="FEFEFE" borderColor="000000" borderThickness="2" borderTransparency="255" colorScheme="1" prefix="" showBorder="false" showGaugeLabels="false" showGlassStyle="false" showValueAboveNeedle="false" subType="HBullet" suffix="" title="" turnOffAnimation="false" turnOffDefaultAnimination="false" type="Bullet" version="1.0.0" zOrderPosition="0">
+  <gadgetPartsSupportingEffects _body="background"/>
+  <gadgetPartsSupportingEffects _body="caption"/>
+  <gadgetPartsSupportingEffects _body="subcaption"/>
+  <gadgetPartsSupportingEffects _body="plot"/>
+  <gadgetPartsSupportingEffects _body="tickmarks"/>
+  <gadgetPartsSupportingEffects _body="tickvalues"/>
+  <gadgetPartsSupportingEffects _body="limitvalues"/>
+  <gadgetPartsSupportingEffects _body="colorrange"/>
+  <gadgetPartsSupportingEffects _body="target"/>
+  <gadgetPartsSupportingEffects _body="tooltip"/>
+  <scale autoAdjustMajorTickMarks="true" majorTickMarksCount="5" max="100" min="0" minorTickMarksCount="4"/>
+  <region color="ff6464" endValue="35.0" label="A" startValue="0.0" transparency="255"/>
+  <region color="66b0d1" endValue="70.0" label="B" startValue="35.0" transparency="255"/>
+  <region color="9acc00" endValue="100.0" label="C" startValue="70.0" transparency="255"/>
+  <thresholds isDashed="false" isTrendZone="false" length="100" lineWidth="2" markerRadius="4" showMarker="false" showThreshold="true" showValueOnTop="true" startValue="75.0" transparency="255"/>
+  <ticks maxLabel="" minLabel="" placeTicksInside="false" placeValuesInside="false" showLimits="true" showTickMarks="true" showTickValues="true" ticksBelowGauge="true" ticksOnRight="false">
+   <major height="8" width="1"/>
+   <minor height="3" width="1"/>
+  </ticks>
+  <toolTip showToolTip="true"/>
+  <valueDefinition query="row[&quot;n10&quot;]"/>
+  <linearGauge showNeedleAbove="false" showNeedleValue="false" showRoundCorners="true">
+   <needle borderColor="000000" borderTransparency="255" borderWidth="1" fillColor="000000" fillTransparency="255" shape="0" size="10" tooltipShowValue="true"/>
+  </linearGauge>
+  <bullet showRoundCorners="true">
+   <valueIndicator borderColor="fefefe" borderTransparency="255" borderWidth="1" color="3578ad" showBorder="true" transparency="255" width="32"/>
+   <bulletPlot borderTransparency="255" borderWidth="2" showAsDot="false" showBorder="false" showShadow="false" showValueLabel="true"/>
+  </bullet>
+  <font font="Arial"/>
+ </Gadget>
+</ActuateChart>
+]]></xml-property>
+                        <property name="inheritColumns">false</property>
+                        <property name="outputFormat">JS</property>
+                        <property name="height">0.7708333333333334in</property>
+                        <property name="width">2.25in</property>
+                        <property name="dataSet">Priority closed Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">t1</property>
+                                <expression name="expression" type="javascript">dataSetRow["t1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t2</property>
+                                <expression name="expression" type="javascript">dataSetRow["t2"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t3</property>
+                                <expression name="expression" type="javascript">dataSetRow["t3"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t4</property>
+                                <expression name="expression" type="javascript">dataSetRow["t4"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t5</property>
+                                <expression name="expression" type="javascript">dataSetRow["t5"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t6</property>
+                                <expression name="expression" type="javascript">dataSetRow["t6"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t7</property>
+                                <expression name="expression" type="javascript">dataSetRow["t7"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t8</property>
+                                <expression name="expression" type="javascript">dataSetRow["t8"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t9</property>
+                                <expression name="expression" type="javascript">dataSetRow["t9"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t10</property>
+                                <expression name="expression" type="javascript">dataSetRow["t10"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n1</property>
+                                <expression name="expression" type="javascript">dataSetRow["n1"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n2</property>
+                                <expression name="expression" type="javascript">dataSetRow["n2"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n3</property>
+                                <expression name="expression" type="javascript">dataSetRow["n3"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n4</property>
+                                <expression name="expression" type="javascript">dataSetRow["n4"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n5</property>
+                                <expression name="expression" type="javascript">dataSetRow["n5"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n6</property>
+                                <expression name="expression" type="javascript">dataSetRow["n6"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n7</property>
+                                <expression name="expression" type="javascript">dataSetRow["n7"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n8</property>
+                                <expression name="expression" type="javascript">dataSetRow["n8"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n9</property>
+                                <expression name="expression" type="javascript">dataSetRow["n9"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n10</property>
+                                <expression name="expression" type="javascript">dataSetRow["n10"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                        </list-property>
+                    </extended-item>
+                </cell>
+            </row>
+            <row id="76">
+                <property name="height">0.34in</property>
+                <cell id="77">
+                    <property name="verticalAlign">bottom</property>
+                    <text-data id="83">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">8pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <expression name="valueExpr">'All Work Orders Closed in '+row["t10"]</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+            <row id="72">
+                <property name="height">0.8125in</property>
+                <cell id="73">
+                    <extended-item extensionName="FlashGadgets" id="74">
+                        <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="1.0">
+ <Gadget backgroundColor="FEFEFE" borderColor="000000" borderThickness="2" borderTransparency="255" colorScheme="1" fractionDigits="0" prefix="" showBorder="false" showGaugeLabels="false" showValueAboveNeedle="false" subType="HBullet" suffix="" title="" turnOffAnimation="false" turnOffDefaultAnimination="false" type="Bullet" version="1.0.0">
+  <gadgetPartsSupportingEffects _body="background"/>
+  <gadgetPartsSupportingEffects _body="caption"/>
+  <gadgetPartsSupportingEffects _body="subcaption"/>
+  <gadgetPartsSupportingEffects _body="plot"/>
+  <gadgetPartsSupportingEffects _body="tickmarks"/>
+  <gadgetPartsSupportingEffects _body="tickvalues"/>
+  <gadgetPartsSupportingEffects _body="limitvalues"/>
+  <gadgetPartsSupportingEffects _body="colorrange"/>
+  <gadgetPartsSupportingEffects _body="target"/>
+  <gadgetPartsSupportingEffects _body="tooltip"/>
+  <scale autoAdjustMajorTickMarks="true" majorTickMarksCount="5" max="100" min="0" minorTickMarksCount="4"/>
+  <region color="ff6464" endValue="133.0" label="A" startValue="0.0" transparency="255"/>
+  <region color="66b0d1" endValue="266.0" label="B" startValue="133.0" transparency="255"/>
+  <region color="9ecc4c" endValue="400.0" label="C" startValue="266.0" transparency="255"/>
+  <thresholds isDashed="false" isTrendZone="false" length="100" lineWidth="1" markerRadius="4" showMarker="false" showThreshold="true" showValueOnTop="true" startValue="300.0" transparency="255"/>
+  <ticks maxLabel="" minLabel="" placeTicksInside="false" placeValuesInside="false" showLimits="true" showTickMarks="true" showTickValues="true" ticksBelowGauge="true" ticksOnRight="false">
+   <major height="8" width="1"/>
+   <minor height="3" width="1"/>
+  </ticks>
+  <toolTip showToolTip="true"/>
+  <valueDefinition query="row[&quot;n7&quot;]+row[&quot;n8&quot;]"/>
+  <linearGauge showNeedleAbove="false" showNeedleValue="false" showRoundCorners="true">
+   <needle borderColor="000000" borderTransparency="255" borderWidth="1" fillColor="000000" fillTransparency="255" shape="0" size="10" tooltipShowValue="true"/>
+  </linearGauge>
+  <bullet showRoundCorners="true">
+   <valueIndicator borderColor="fefefe" borderTransparency="255" borderWidth="1" color="3578ad" showBorder="true" transparency="255" width="32"/>
+   <bulletPlot borderTransparency="255" borderWidth="2" showAsDot="false" showBorder="false" showShadow="false" showValueLabel="true"/>
+  </bullet>
+  <font font="Arial"/>
+ </Gadget>
+</ActuateChart>
+]]></xml-property>
+                        <property name="inheritColumns">false</property>
+                        <property name="outputFormat">JS</property>
+                        <property name="height">0.7395833333333334in</property>
+                        <property name="width">2.2395833333333335in</property>
+                        <property name="dataSet">Priority closed Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">t1</property>
+                                <expression name="expression" type="javascript">dataSetRow["t1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t2</property>
+                                <expression name="expression" type="javascript">dataSetRow["t2"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t3</property>
+                                <expression name="expression" type="javascript">dataSetRow["t3"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t4</property>
+                                <expression name="expression" type="javascript">dataSetRow["t4"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t5</property>
+                                <expression name="expression" type="javascript">dataSetRow["t5"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t6</property>
+                                <expression name="expression" type="javascript">dataSetRow["t6"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t7</property>
+                                <expression name="expression" type="javascript">dataSetRow["t7"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t8</property>
+                                <expression name="expression" type="javascript">dataSetRow["t8"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t9</property>
+                                <expression name="expression" type="javascript">dataSetRow["t9"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">t10</property>
+                                <expression name="expression" type="javascript">dataSetRow["t10"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n1</property>
+                                <expression name="expression" type="javascript">dataSetRow["n1"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n2</property>
+                                <expression name="expression" type="javascript">dataSetRow["n2"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n3</property>
+                                <expression name="expression" type="javascript">dataSetRow["n3"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n4</property>
+                                <expression name="expression" type="javascript">dataSetRow["n4"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n5</property>
+                                <expression name="expression" type="javascript">dataSetRow["n5"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n6</property>
+                                <expression name="expression" type="javascript">dataSetRow["n6"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n7</property>
+                                <expression name="expression" type="javascript">dataSetRow["n7"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n8</property>
+                                <expression name="expression" type="javascript">dataSetRow["n8"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n9</property>
+                                <expression name="expression" type="javascript">dataSetRow["n9"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">n10</property>
+                                <expression name="expression" type="javascript">dataSetRow["n10"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                        </list-property>
+                    </extended-item>
+                </cell>
+            </row>
+            <row id="90">
+                <property name="height">0.6770833333333334in</property>
+                <cell id="91">
+                    <property name="textAlign">center</property>
+                    <grid id="94">
+                        <column id="95">
+                            <property name="width">50%</property>
+                        </column>
+                        <column id="96"/>
+                        <row id="97">
+                            <cell id="98">
+                                <image id="92">
+                                    <property name="marginLeft">20pt</property>
+                                    <property name="height">0.53125in</property>
+                                    <property name="width">0.6458333333333334in</property>
+                                    <property name="source">embed</property>
+                                    <property name="imageName">ScreenHunter_01 Aug. 05 08.48.gif</property>
+                                    <list-property name="action">
+                                        <structure>
+                                            <property name="linkType">drill-through</property>
+                                            <property name="toolTip">Open Source Example</property>
+                                            <property name="reportName">WorkOrd Detail Maximo.rptdesign</property>
+                                            <property name="targetWindow">_blank</property>
+                                            <property name="targetFileType">report-design</property>
+                                            <list-property name="paramBindings">
+                                                <structure>
+                                                    <property name="paramName">cnt</property>
+                                                    <simple-property-list name="expression">
+                                                        <value type="javascript">row["n7"]+row["n8"]</value>
+                                                    </simple-property-list>
+                                                </structure>
+                                                <structure>
+                                                    <property name="paramName">MonthName</property>
+                                                    <simple-property-list name="expression">
+                                                        <value type="javascript">row["t10"]</value>
+                                                    </simple-property-list>
+                                                </structure>
+                                            </list-property>
+                                        </structure>
+                                    </list-property>
+                                </image>
+                            </cell>
+                            <cell id="99">
+                                <image id="86">
+                                    <property name="marginLeft">10pt</property>
+                                    <property name="marginRight">0pt</property>
+                                    <property name="height">0.53125in</property>
+                                    <property name="width">0.6458333333333334in</property>
+                                    <property name="source">embed</property>
+                                    <property name="imageName">ScreenHunter_01 Aug. 05 08.48.gif</property>
+                                    <list-property name="action">
+                                        <structure>
+                                            <property name="linkType">drill-through</property>
+                                            <property name="toolTip">Actuate Example</property>
+                                            <property name="reportName">WorkOrd Detail Actuate.rptdesign</property>
+                                            <property name="targetWindow">_blank</property>
+                                            <property name="targetFileType">report-design</property>
+                                            <list-property name="paramBindings">
+                                                <structure>
+                                                    <property name="paramName">cnt</property>
+                                                    <simple-property-list name="expression">
+                                                        <value type="javascript">row["n7"]+row["n8"]</value>
+                                                    </simple-property-list>
+                                                </structure>
+                                                <structure>
+                                                    <property name="paramName">MonthName</property>
+                                                    <simple-property-list name="expression">
+                                                        <value type="javascript">row["t10"]</value>
+                                                    </simple-property-list>
+                                                </structure>
+                                            </list-property>
+                                        </structure>
+                                    </list-property>
+                                </image>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+            </row>
+            <row id="87">
+                <property name="height">0.34in</property>
+                <cell id="88">
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">top</property>
+                    <text-data id="89">
+                        <property name="fontFamily">"Trebuchet MS"</property>
+                        <property name="fontSize">8pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <expression name="valueExpr">'See Work Orders Closed in '+row["t10"]</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+        </grid>
+    </body>
+    <list-property name="images">
+        <structure>
+            <property name="name">ScreenHunter_01 Aug. 05 08.48.gif</property>
+            <property name="type">image/gif</property>
+            <property name="data">
+                R0lGODlhKAAmAHAAACH5BAgAAP8ALAAAAAAoACYAh2VhWlxZT1pXUlxbVW5sZnZ0b4aEfZeUkpKOg5WS
+                iJyVjpeWlaKdmaOjm6aimaihnaqnqaWkoqqpoq6tp6urraysrrq2rrSzs7W1tre3uby5s7q5urq6vL29
+                vb+/v76+wcG8tcTBvMLCvsfGxsLCxcXExMfHx8fHyczFxcnHzMvLx8rKysvLy83Nzc3Nz87Ozs/P0dvX
+                z9LR09PT09PS1dXU1dXV19fX19fW2NnZ2tvb29rZ3d3d3d3d39zb4t7e4N/e4+Le2ubk2uLi4uLh5uPj
+                5eXl5eTk5ufn5+bn6ebq7evl6Orp5ert5+zq5unp6ujp6+vr6+nq7uvr7e7q6e3r7ezs6u7t6+/v6u3t
+                7ezs7uzu7e/v7+rs8u7t8u7u8O7w7+7y8e/y9fLt6PLv7vHv9vDx6vHx7vbz7/Hx8fDx8/Hz8PPz8fLy
+                8vHx9fLy9PL18/L19fb18vX19fX19/T29fX39vf29Pf39/P0+PP3+Pb3+fn18vn39fj3/fn68Pn59vn6
+                9f369v/99vj4+fn5+/v7+/r7/fn8+/39+v//+/39/fz8/v7+/P///wAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAj+AA0ZWkSQYCE7dgw5WjRQIENCCgtKnEjRIUGBjjI6MgSRUEaCCyEK
+                HEmypEmGAg/iSZnRUKGHCk3KnJlypEFChebgLNRQJE2ZKG0SGlroo0aXNX/KXOiS5yJCixzhaTOkRIsV
+                OexInRNUKUmmOA3ZKRrFBIsoc9oUiiKjRhupXk868ojT0aEjJNS80TLEB5AjTw6ZMOKo0KE9hZ92lXuo
+                8CE6R04UOuKCRREiSWhcsJFmRhGPhxhB5PkzKiNGoQl1OJQjQ5EkSXj8OELowws8LJ7YPTS0aaHfwIFn
+                PC0ag5YiHNQc+ZJEy5svOeicOPFExhtChwp1DM696KLTjqb+fCiUAUaRJ2/s/taCIwcFOiuiGD7Icaj9
+                +x4XhXaEo8YTDj8MMZxHhujUAwYy2JDEIbyNpR1+92XUGCMfHGECCTho4QhqjrQRlRY/mPBBET/gBOGJ
+                Hm244QVDtDDiEdptxNAebwwhAwlH0PDGHh3hgaJ9G23UwRErfABEEXYdtccXeJ1AxA5qMCIGIYnI8SNE
+                QS7yAg5JZGBDFFoweJEaWiRxgQs9DLGHHojAYUciV35EEBIXOFLBD0V8gZgjuqnxxA4ViPdDm3U4koYd
+                eCSq6KJyclTBETCs8EUUSXwxxxxGOLeBC1p4YAcggLBxBiGLlproQgsV1dohLsBwBCP+WqCFRxIkfKAG
+                BkgEoggWgQDSxhsIBSusHRLF1EEJePxQgw066HBDDiS08AUNH4iwQAmKOCHHHn4MO2xUIGGEwQZIRIFE
+                GlwYwcMUR2DQghoNLDCABYr0MQUjl+ar7xwtRfVSUStg4MELOTQLwwclRJBEDkMMokEAIQCyRx777ruQ
+                RBcbEkUNJXjQgQcqsHDFDAa8wAcVilwgAL1jODKHHXWsAYgcfFx6cbFRzdVGGmdYkUUjd6DwAAhLAHED
+                IBcMMMEgWVRRCCJgzHHGHTZP1NJADOHBBR6OGHHHGA5YcAEKHZhghQQBaFAveoVYykbVFWGd0x57qEHI
+                HYIEgYD+BQ9scAEHQ0wgAAiDkDGHFozAsUYbb90sI6oZta3GIW1YgQYfYyTgQAERLEBBDhEIEIIgc3wB
+                bBqMywnuRyP9lkUaddixhhxoCIGABAQcEEEEPjAggAZ8oHFF3ak7bnVGjcgBBhhpZAEIGXyYYQDuB0AQ
+                AQ6hE85EFX4UD5Kcqgdyhx1bHDJHFWy4wTMCDRRwwAcVyMAAATEI8kYZxWukv0Yg5cT4/1pgwx+cgAAH
+                EGABKeDACCYgAjbkoQtpSMP+JnixheAhgm3gQhTogIQgMEEIBogAARjAgunxAQtTUJ8EKai/gmwkgxlE
+                Qg/eMAMbqEAEBmhAAAygACb0gQmDjTgDF1bIQtVZcGdcyAIYoAAFIMRGBQ1ggAKCwAcrcGENTeACF4rI
+                P3AxZA5ZyEIbtvAFN0hBCmlowh8GIYc+PCEPeggDHLTIRfCBhBBhZJwavLAHKYDBCmZgAheSIAYlKEEM
+                UqBjHUESrjkkkQtIaMPyuGCHJ3hBDV/Agxyz8AUtBgQAOw==
+</property>
+        </structure>
+    </list-property>
+</report>
