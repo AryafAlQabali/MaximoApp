@@ -861,6 +861,7 @@ union
   <extendedProperties name="jschart.zoom" value="xy"/>
   <extendedProperties name="enable.drill.proc_" value="true"/>
   <extendedProperties name="drilled.filters_" value="_@,_"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="2.3"/>
    <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
@@ -1448,7 +1449,7 @@ union
                     <property name="showFooter">false</property>
                     <property name="headerHTML">null</property>
                     <property name="footerHTML">null</property>
-                    <property name="backgroundColor">auto</property>
+                    <property name="backgroundColor">RGB(255,255,255)</property>
                     <property name="freeFormGadgets">
                         <gadget name="71a45175-76ba-4475-84be-847487f0e895" id="6">
                             <property name="x">10px</property>

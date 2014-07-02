@@ -14,7 +14,7 @@
             <property name="tabs">
                 <tab-element name="40328274-ab88-43c4-b517-c354cfa1fa23" id="29">
                     <property name="title">Work Order Performance</property>
-                    <property name="backgroundColor">auto</property>
+                    <property name="backgroundColor">RGB(255,255,255)</property>
                     <property name="sections">
                         <section id="30">
                             <property name="width">26.593406593406595%</property>

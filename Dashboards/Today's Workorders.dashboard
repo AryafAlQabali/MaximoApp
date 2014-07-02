@@ -43,18 +43,19 @@
             <property name="tabs">
                 <tab-element name="e54d3559-35ff-4560-ad45-6f6f89cccb07" id="16">
                     <property name="title">Today's Workorders</property>
+                    <property name="backgroundColor">RGB(255,255,255)</property>
                     <property name="freeFormGadgets">
                         <gadget name="Gadget_621bc30e-6d48-4851-85c5-0e36cd340254" id="25">
                             <property name="x">0px</property>
                             <property name="y">0px</property>
-                            <property name="height">50px</property>
+                            <property name="height">100px</property>
                             <property name="width">159px</property>
                             <property name="title">Select User</property>
                             <property name="showTitle">false</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">1</property>
                             <property name="showScrollBar">false</property>
-                            <property name="height">50px</property>
+                            <property name="height">100px</property>
                             <property name="width">159px</property>
                             <property name="caption">
                                 <gadget-caption id="26">
@@ -69,7 +70,7 @@
                                 </gadget-caption>
                             </property>
                             <property name="content">
-                                <dropdown-data-selector id="27">
+                                <radio-data-selector id="28">
                                     <property name="externalContentRef">
                                         <external-element-ref>
                                             <property name="sourceFile">^/Report Designs/Workorder Location.rptdesign</property>
@@ -81,13 +82,13 @@
                                     <property name="controlType">list-box</property>
                                     <property name="dataType">string</property>
                                     <simple-property-list name="selectedValues">
-                                        <value>Christine Horn</value>
+                                        <value>John Hunter</value>
                                     </simple-property-list>
-                                    <property name="allowTyping">false</property>
-                                    <property name="autoSuggest">false</property>
+                                    <property name="orientation">vertical</property>
+                                    <property name="autoAdjust">false</property>
+                                    <property name="autoAdjustNumber">5</property>
                                     <property name="listLimit">1000</property>
-                                    <expression name="defaultValue" type="javascript">Christine Horn</expression>
-                                </dropdown-data-selector>
+                                </radio-data-selector>
                             </property>
                             <property name="observers">
                                 <event-subscriber>
@@ -182,7 +183,7 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">^/Report Designs/Workorder Location.rptdesign</property>
+                                            <property name="sourceFile">/Applications/MaximoApp/Report Designs/Workorder Location.rptdesign</property>
                                         </external-element-ref>
                                     </property>
                                     <property name="paramSettings">

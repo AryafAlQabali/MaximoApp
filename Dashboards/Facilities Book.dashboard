@@ -47,10 +47,11 @@
     </body>
     <property name="dashboardView">
         <dashboard id="4">
-            <property name="activeTab">949acb99-4b38-4272-bdd7-fd02adc21ac8</property>
+            <property name="activeTab">1142c101-2876-422f-868e-abb771e0fea0</property>
             <property name="tabs">
                 <tab-element name="b37e4650-e213-4a10-a092-16f4d648dcad" id="12">
                     <property name="title">Facilities Book</property>
+                    <property name="backgroundColor">RGB(255,255,255)</property>
                     <property name="freeFormGadgets">
                         <gadget name="eb1f7f0d-88ff-4532-95bc-48c64b1ff1ec" id="18">
                             <list-property name="userProperties">

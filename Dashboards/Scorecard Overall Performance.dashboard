@@ -47,10 +47,11 @@
     </body>
     <property name="dashboardView">
         <dashboard id="4">
-            <property name="activeTab">5c407c55-215b-46b6-a04b-79d5a32f64bf</property>
+            <property name="activeTab">8db04f66-8a44-41df-a533-c9e1c373086f</property>
             <property name="tabs">
                 <tab-element name="8db04f66-8a44-41df-a533-c9e1c373086f" id="11">
                     <property name="title">Overall Performance</property>
+                    <property name="backgroundColor">RGB(255,255,255)</property>
                     <property name="freeFormGadgets">
                         <gadget name="b5fed30e-14a9-4466-8dfc-205a9cabe1cb" id="17">
                             <list-property name="userProperties">
