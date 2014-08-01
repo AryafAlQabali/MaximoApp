@@ -135,7 +135,7 @@
                     <structure>
                         <property name="position">2</property>
                         <property name="name">Failures</property>
-                        <property name="dataType">float</property>
+                        <property name="dataType">integer</property>
                     </structure>
                     <structure>
                         <property name="position">3</property>
@@ -171,7 +171,7 @@
                     <property name="position">2</property>
                     <property name="name">Failures</property>
                     <property name="nativeName">Failures</property>
-                    <property name="dataType">float</property>
+                    <property name="dataType">integer</property>
                 </structure>
                 <structure>
                     <property name="position">3</property>
@@ -328,7 +328,7 @@ from maxdata a
                 <property name="height">3.4375in</property>
                 <cell id="27">
                     <data id="35">
-                        <property name="fontSize">8pt</property>
+                        <property name="fontFamily">"Verdana"</property>
                         <property name="fontWeight">bold</property>
                         <property name="color">#666666</property>
                         <property name="textAlign">center</property>
@@ -431,7 +431,10 @@ from maxdata a
      <color _nil="1"/>
     </separator>
     <title>
-     <caption value=""/>
+     <caption value="">
+      <font name="Tahoma"/>
+      <color _body=",255,102,102,102"/>
+     </caption>
      <background _nil="1"/>
      <outline>
       <color _nil="1"/>
@@ -442,6 +445,7 @@ from maxdata a
    <outline>
     <color _nil="1"/>
    </outline>
+   <cursor type="0"/>
   </block>
   <extendedProperties name="enable.area.alt" value="false"/>
   <extendedProperties name="enable.drill.category" value="true"/>
@@ -467,7 +471,7 @@ from maxdata a
     <color _body=",128,127,127,127"/>
    </outline>
   </emptyMessage>
-  <axes staggered="true">
+  <axes staggered="false">
    <title>
     <caption value="">
      <font bold="false">
@@ -498,7 +502,7 @@ from maxdata a
      <series _type="BarSeries" seriesIdentifier="Failure Count" stacked="false">
       <label>
        <caption value="">
-        <font size="8.0"/>
+        <font name="Verdana" size="8.0"/>
        </caption>
        <background _nil="1"/>
        <outline>
@@ -513,13 +517,15 @@ from maxdata a
       </dataPoint>
       <triggers condition="6">
        <action type="1">
-        <value _type="TooltipValue" text="" delay="200"/>
+        <value _type="TooltipValue" text="" delay="200">
+         <formatSpecifier _type="NumberFormatSpecifier" prefix="" suffix="" fractionDigits="0"/>
+        </value>
        </action>
       </triggers>
       <triggers condition="2">
        <action type="0">
         <value _type="MultiURLValues">
-         <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;WorkOrd by Cause.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;CauseParameter&lt;/property&gt;&#10;            &lt;expression name=&quot;expression&quot; type=&quot;javascript&quot;&gt;row[&quot;Failure Code&quot;]&lt;/expression&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
+         <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;WorkOrd by Cause.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_blank&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;    &lt;list-property name=&quot;paramBindings&quot;&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;CauseParameter&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;javascript&quot;&gt;row[&quot;Failure Code&quot;]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;        &lt;structure&gt;&#10;            &lt;property name=&quot;paramName&quot;&gt;amount&lt;/property&gt;&#10;            &lt;simple-property-list name=&quot;expression&quot;&gt;&#10;                &lt;value type=&quot;bre&quot;&gt;[Failures]&lt;/value&gt;&#10;            &lt;/simple-property-list&gt;&#10;        &lt;/structure&gt;&#10;    &lt;/list-property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
           <label>
            <caption value="failure"/>
           </label>
@@ -600,6 +606,7 @@ from maxdata a
        <components type="1"/>
       </dataPoint>
       <curveFitting _nil="1"/>
+      <cursor type="0"/>
       <markers type="6" size="3" visible="true">
        <outline visible="false"/>
       </markers>
@@ -689,7 +696,7 @@ from maxdata a
    </lineAttributes>
    <label>
     <caption value="">
-     <font rotation="0.0"/>
+     <font rotation="45.0"/>
     </caption>
     <background _nil="1"/>
     <outline>
@@ -739,6 +746,12 @@ from maxdata a
                                         <property name="paramName">CauseParameter</property>
                                         <simple-property-list name="expression">
                                             <value type="javascript">row["Failure Code"]</value>
+                                        </simple-property-list>
+                                    </structure>
+                                    <structure>
+                                        <property name="paramName">amount</property>
+                                        <simple-property-list name="expression">
+                                            <value type="bre">[Failures]</value>
                                         </simple-property-list>
                                     </structure>
                                 </list-property>

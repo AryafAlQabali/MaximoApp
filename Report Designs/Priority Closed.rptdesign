@@ -870,8 +870,8 @@
     </page-setup>
     <body>
         <grid id="68">
-            <property name="height">3.8854166666666665in</property>
-            <property name="width">2.3333333333333335in</property>
+            <property name="height">4.6875in</property>
+            <property name="width">3in</property>
             <property name="dataSet">Priority closed Data Set</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -984,10 +984,12 @@
                 <cell id="79">
                     <property name="verticalAlign">bottom</property>
                     <text-data id="82">
-                        <property name="fontFamily">"Arial"</property>
-                        <property name="fontSize">8pt</property>
+                        <property name="fontFamily">"Verdana"</property>
+                        <property name="fontSize">9pt</property>
                         <property name="fontWeight">bold</property>
-                        <property name="textAlign">center</property>
+                        <property name="color">#666666</property>
+                        <property name="marginTop">10pt</property>
+                        <property name="textAlign">left</property>
                         <expression name="valueExpr">'Priority 1 Work Orders Closed in '+row["t10"]</expression>
                         <property name="contentType">html</property>
                     </text-data>
@@ -1010,9 +1012,9 @@
   <gadgetPartsSupportingEffects _body="target"/>
   <gadgetPartsSupportingEffects _body="tooltip"/>
   <scale autoAdjustMajorTickMarks="true" majorTickMarksCount="5" max="100" min="0" minorTickMarksCount="4"/>
-  <region color="ff6464" endValue="35.0" label="A" startValue="0.0" transparency="255"/>
-  <region color="66b0d1" endValue="70.0" label="B" startValue="35.0" transparency="255"/>
-  <region color="9acc00" endValue="100.0" label="C" startValue="70.0" transparency="255"/>
+  <region color="de5843" endValue="35.0" label="A" startValue="0.0" transparency="255"/>
+  <region color="f5db70" endValue="70.0" label="B" startValue="35.0" transparency="255"/>
+  <region color="97d15e" endValue="100.0" label="C" startValue="70.0" transparency="255"/>
   <thresholds isDashed="false" isTrendZone="false" length="100" lineWidth="2" markerRadius="4" showMarker="false" showThreshold="true" showValueOnTop="true" startValue="75.0" transparency="255"/>
   <ticks maxLabel="" minLabel="" placeTicksInside="false" placeValuesInside="false" showLimits="true" showTickMarks="true" showTickValues="true" ticksBelowGauge="true" ticksOnRight="false">
    <major height="8" width="1"/>
@@ -1027,14 +1029,14 @@
    <valueIndicator borderColor="fefefe" borderTransparency="255" borderWidth="1" color="3578ad" showBorder="true" transparency="255" width="32"/>
    <bulletPlot borderTransparency="255" borderWidth="2" showAsDot="false" showBorder="false" showShadow="false" showValueLabel="true"/>
   </bullet>
-  <font font="Arial"/>
+  <font font="Verdana"/>
  </Gadget>
 </ActuateChart>
 ]]></xml-property>
                         <property name="inheritColumns">false</property>
                         <property name="outputFormat">JS</property>
                         <property name="height">0.7708333333333334in</property>
-                        <property name="width">2.25in</property>
+                        <property name="width">2.8in</property>
                         <property name="dataSet">Priority closed Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>
@@ -1146,10 +1148,11 @@
                 <cell id="77">
                     <property name="verticalAlign">bottom</property>
                     <text-data id="83">
-                        <property name="fontFamily">"Arial"</property>
-                        <property name="fontSize">8pt</property>
+                        <property name="fontFamily">"Verdana"</property>
+                        <property name="fontSize">9pt</property>
                         <property name="fontWeight">bold</property>
-                        <property name="textAlign">center</property>
+                        <property name="color">#666666</property>
+                        <property name="textAlign">left</property>
                         <expression name="valueExpr">'All Work Orders Closed in '+row["t10"]</expression>
                         <property name="contentType">html</property>
                     </text-data>
@@ -1172,9 +1175,9 @@
   <gadgetPartsSupportingEffects _body="target"/>
   <gadgetPartsSupportingEffects _body="tooltip"/>
   <scale autoAdjustMajorTickMarks="true" majorTickMarksCount="5" max="100" min="0" minorTickMarksCount="4"/>
-  <region color="ff6464" endValue="133.0" label="A" startValue="0.0" transparency="255"/>
-  <region color="66b0d1" endValue="266.0" label="B" startValue="133.0" transparency="255"/>
-  <region color="9ecc4c" endValue="400.0" label="C" startValue="266.0" transparency="255"/>
+  <region color="de5843" endValue="133.0" label="A" startValue="0.0" transparency="255"/>
+  <region color="f5db70" endValue="266.0" label="B" startValue="133.0" transparency="255"/>
+  <region color="97d15e" endValue="400.0" label="C" startValue="266.0" transparency="255"/>
   <thresholds isDashed="false" isTrendZone="false" length="100" lineWidth="1" markerRadius="4" showMarker="false" showThreshold="true" showValueOnTop="true" startValue="300.0" transparency="255"/>
   <ticks maxLabel="" minLabel="" placeTicksInside="false" placeValuesInside="false" showLimits="true" showTickMarks="true" showTickValues="true" ticksBelowGauge="true" ticksOnRight="false">
    <major height="8" width="1"/>
@@ -1189,14 +1192,14 @@
    <valueIndicator borderColor="fefefe" borderTransparency="255" borderWidth="1" color="3578ad" showBorder="true" transparency="255" width="32"/>
    <bulletPlot borderTransparency="255" borderWidth="2" showAsDot="false" showBorder="false" showShadow="false" showValueLabel="true"/>
   </bullet>
-  <font font="Arial"/>
+  <font font="Verdana"/>
  </Gadget>
 </ActuateChart>
 ]]></xml-property>
                         <property name="inheritColumns">false</property>
                         <property name="outputFormat">JS</property>
                         <property name="height">0.7395833333333334in</property>
-                        <property name="width">2.2395833333333335in</property>
+                        <property name="width">2.8in</property>
                         <property name="dataSet">Priority closed Data Set</property>
                         <list-property name="boundDataColumns">
                             <structure>
@@ -1303,6 +1306,21 @@
                     </extended-item>
                 </cell>
             </row>
+            <row id="111">
+                <property name="height">0.5208333333333334in</property>
+                <cell id="112">
+                    <property name="textAlign">center</property>
+                    <text-data id="89">
+                        <property name="fontFamily">"Verdana"</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="color">#666666</property>
+                        <property name="marginTop">5pt</property>
+                        <property name="textAlign">left</property>
+                        <expression name="valueExpr">'View Closed Work Orders for  '+row["t10"]</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
             <row id="90">
                 <property name="height">0.6770833333333334in</property>
                 <cell id="91">
@@ -1387,14 +1405,6 @@
                 <cell id="88">
                     <property name="textAlign">center</property>
                     <property name="verticalAlign">top</property>
-                    <text-data id="89">
-                        <property name="fontFamily">"Trebuchet MS"</property>
-                        <property name="fontSize">8pt</property>
-                        <property name="fontWeight">bold</property>
-                        <property name="textAlign">center</property>
-                        <expression name="valueExpr">'See Work Orders Closed in '+row["t10"]</expression>
-                        <property name="contentType">html</property>
-                    </text-data>
                 </cell>
             </row>
         </grid>

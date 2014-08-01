@@ -859,6 +859,7 @@
             <row id="12">
                 <property name="height">2.7291666666666665in</property>
                 <cell id="13">
+                    <property name="fontFamily">"Verdana"</property>
                     <data id="48">
                         <property name="fontSize">8pt</property>
                         <property name="whiteSpace">nowrap</property>

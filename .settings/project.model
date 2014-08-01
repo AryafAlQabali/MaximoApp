@@ -1,14 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <com.actuate.istudio.analysis.model:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.actuate.istudio.analysis.model="http:///com.actuate.istudio.analysis.model.ecore" name="MaximoApp">
-  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="ThemesReportItems3.rptlibrary" path="/MaximoApp/ThemesReportItems3.rptlibrary" reports="//@files.14 //@files.15 //@files.16 //@files.17 //@files.19 //@files.20 //@files.21 //@files.22 //@files.23 //@files.24"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="ThemesReportItems3.rptlibrary" path="/MaximoApp/ThemesReportItems3.rptlibrary" reports="//@files.15 //@files.16 //@files.17 //@files.18 //@files.19 //@files.20 //@files.21 //@files.22 //@files.23 //@files.24 //@files.25"/>
   <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Work Order Performance.dashboard" path="/MaximoApp/Dashboards/Work Order Performance.dashboard"/>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="BIRT Online Maps.rptlibrary" path="/MaximoApp/BIRT Online Maps.rptlibrary" reports="//@files.15"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="BIRT Online Maps.rptlibrary" path="/MaximoApp/BIRT Online Maps.rptlibrary" reports="//@files.17"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="Facilities.datadesign" path="/MaximoApp/Data Objects/Facilities.datadesign">
+    <dataSets name="List of Views">
+      <columns name="Id"/>
+      <columns name="Name"/>
+      <columns name="Description"/>
+      <columns name="SeqNo"/>
+    </dataSets>
+    <dataSets name="Measure Meta data">
+      <columns name="MeasureName"/>
+      <columns name="LocationName"/>
+      <columns name="Description"/>
+      <columns name="Notes"/>
+      <columns name="Critical"/>
+      <columns name="Owner"/>
+      <columns name="OwnerAssistant"/>
+      <columns name="Link"/>
+      <columns name="UnitName"/>
+      <columns name="UnitDescription"/>
+      <columns name="UnitPrefix"/>
+      <columns name="UnitSuffix"/>
+      <columns name="UnitThousandSeparator"/>
+      <columns name="UnitDecimalSeparator"/>
+      <columns name="UnitWholeDigits"/>
+      <columns name="UnitDecimalDigits"/>
+      <columns name="Kind"/>
+      <columns name="Polarity"/>
+      <columns name="StoragePeriod"/>
+      <columns name="ConsolidationPeriod"/>
+      <columns name="LocationConsolidation"/>
+      <columns name="LocationIgnoreBlank"/>
+      <columns name="PeriodConsolidation"/>
+      <columns name="PeriodIgnoreBlank"/>
+      <columns name="OrderOfCalculation"/>
+      <columns name="Formula"/>
+      <columns name="Submeasures"/>
+    </dataSets>
+    <dataSets name="Hierarchy Info From View">
+      <columns name="MeasureLevel"/>
+      <columns name="ParentMeasureName"/>
+      <columns name="MeasureName"/>
+      <columns name="LocationLevel"/>
+      <columns name="ParentLocationName"/>
+      <columns name="LocationName"/>
+      <columns name="PeriodName"/>
+      <columns name="BaseName"/>
+      <columns name="BaseData"/>
+      <columns name="CompName"/>
+      <columns name="CompData"/>
+      <columns name="CompVar"/>
+      <columns name="CompVarPct"/>
+      <columns name="CompIdx"/>
+      <columns name="CompIdxRangeId"/>
+      <columns name="CompIdxColor"/>
+      <columns name="CompTxtColor"/>
+      <columns name="WorstMsrIdxRangeId"/>
+      <columns name="WorstMsrIdxColor"/>
+      <columns name="WorstLocIdxRangeId"/>
+      <columns name="WorstLocIdxColor"/>
+    </dataSets>
+    <dataSets name="Data From View">
+      <columns name="MeasureName"/>
+      <columns name="LocationName"/>
+      <columns name="PeriodName"/>
+      <columns name="BaseName"/>
+      <columns name="BaseData"/>
+      <columns name="CompName"/>
+      <columns name="CompData"/>
+      <columns name="CompVar"/>
+      <columns name="CompVarPct"/>
+      <columns name="CompIdx"/>
+      <columns name="CompIdxRangeId"/>
+      <columns name="CompIdxColor"/>
+      <columns name="CompTxtColor"/>
+      <columns name="WorstMsrIdxRangeId"/>
+      <columns name="WorstMsrIdxColor"/>
+      <columns name="WorstLocIdxRangeId"/>
+      <columns name="WorstLocIdxColor"/>
+      <columns name="ReportingPeriodShortDate" expression="row[&quot;PeriodName&quot;].substr(5,2)"/>
+      <columns name="Date" expression="new Date(row[&quot;PeriodName&quot;])"/>
+    </dataSets>
+    <dataSets name="Commentary">
+      <columns name="MeasureName"/>
+      <columns name="LocationName"/>
+      <columns name="PeriodName"/>
+      <columns name="CommentaryType"/>
+      <columns name="CommentaryText"/>
+      <columns name="SignatureName"/>
+      <columns name="SignatureTime"/>
+    </dataSets>
+    <dataSets name="List of Measures">
+      <columns name="Id"/>
+      <columns name="Name"/>
+      <columns name="Description"/>
+      <columns name="SeqNo"/>
+    </dataSets>
+    <dataSets name="List of Locations">
+      <columns name="Id"/>
+      <columns name="Name"/>
+      <columns name="Description"/>
+      <columns name="SeqNo"/>
+    </dataSets>
+    <dataSets name="List of Periods">
+      <columns name="Id"/>
+      <columns name="Name"/>
+    </dataSets>
+  </files>
   <files xsi:type="com.actuate.istudio.analysis.model:Data" name="Maximo.data" path="/MaximoApp/Data Objects/Maximo.data"/>
   <files xsi:type="com.actuate.istudio.analysis.model:Data" name="wo_datadesign_dm.data" path="/MaximoApp/Data Objects/wo_datadesign_dm.data">
-    <targetDashboardsMap key="//@files.12" value="1"/>
+    <targetDashboardsMap key="//@files.13" value="1"/>
   </files>
   <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Scorecard Overall Performance.dashboard" path="/MaximoApp/Dashboards/Scorecard Overall Performance.dashboard"/>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="Maximo.rptlibrary" path="/MaximoApp/Maximo.rptlibrary" reports="//@files.16 //@files.17 //@files.18 //@files.19 //@files.20 //@files.21 //@files.22 //@files.23 //@files.24"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="Maximo.rptlibrary" path="/MaximoApp/Maximo.rptlibrary" reports="//@files.18 //@files.19 //@files.20 //@files.21 //@files.22 //@files.23 //@files.24 //@files.25"/>
   <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Facilities Book.dashboard" path="/MaximoApp/Dashboards/Facilities Book.dashboard"/>
   <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Maximo Dashboard.dashboard" path="/MaximoApp/Dashboards/Maximo Dashboard.dashboard"/>
   <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Today's Workorders.dashboard" path="/MaximoApp/Dashboards/Today's Workorders.dashboard"/>
@@ -72,7 +178,7 @@
     </dataSets>
   </files>
   <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Work Order Analysis.dashboard" path="/MaximoApp/Dashboards/Work Order Analysis.dashboard">
-    <dataMap key="//@files.4" value="1"/>
+    <dataMap key="//@files.5" value="1"/>
   </files>
   <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="wo_datadesign_dm.datadesign" path="/MaximoApp/Data Objects/wo_datadesign_dm.datadesign">
     <dataSets name="Work Order Data Set">
@@ -93,7 +199,24 @@
     </dataSets>
   </files>
   <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd Detail Maximo.rptdesign" path="/MaximoApp/Report Designs/WorkOrd Detail Maximo.rptdesign" libraries="//@files.0">
-    <linkedFromReportsMap key="//@files.24" value="1"/>
+    <linkedFromReportsMap key="//@files.25" value="1"/>
+    <dataSets name="Work Order Detail Data Set">
+      <columns name="seq"/>
+      <columns name="Region"/>
+      <columns name="Facility"/>
+      <columns name="Work Order Number"/>
+      <columns name="Supervisor"/>
+      <columns name="Phone Ext"/>
+      <columns name="Asset Tag"/>
+      <columns name="Asset Description"/>
+      <columns name="Estimated Hours"/>
+      <columns name="Actual Hours"/>
+      <columns name="Priority"/>
+      <columns name="Labor and Material Cost"/>
+      <columns name="Category"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd by Cause.rptdesign" path="/MaximoApp/Report Designs/WorkOrd by Cause.rptdesign" libraries="//@files.0">
     <dataSets name="Work Order Detail Data Set">
       <columns name="seq"/>
       <columns name="Region"/>
@@ -125,8 +248,8 @@
       <columns name="Pin" expression="&quot;A&quot;"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd Waiting.rptdesign" path="/MaximoApp/Report Designs/WorkOrd Waiting.rptdesign" libraries="//@files.6 //@files.0">
-    <linkedFromReportsMap key="//@files.23" value="3"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd Waiting.rptdesign" path="/MaximoApp/Report Designs/WorkOrd Waiting.rptdesign" libraries="//@files.7 //@files.0">
+    <linkedFromReportsMap key="//@files.24" value="3"/>
     <dataSets name="Work Order Detail Data Set">
       <columns name="seq"/>
       <columns name="Region"/>
@@ -143,7 +266,7 @@
       <columns name="Category"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd Drill.rptdesign" path="/MaximoApp/Report Designs/WorkOrd Drill.rptdesign" libraries="//@files.6 //@files.0">
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd Drill.rptdesign" path="/MaximoApp/Report Designs/WorkOrd Drill.rptdesign" libraries="//@files.7 //@files.0">
     <dataSets name="Work Order Detail Data Set">
       <columns name="seq"/>
       <columns name="Region"/>
@@ -160,14 +283,14 @@
       <columns name="Category"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Outage Chart.rptdesign" path="/MaximoApp/Report Designs/Outage Chart.rptdesign" libraries="//@files.6">
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Outage Chart.rptdesign" path="/MaximoApp/Report Designs/Outage Chart.rptdesign" libraries="//@files.7 //@files.0">
     <dataSets name="Outage Data Set">
       <columns name="the_month"/>
       <columns name="critical_out"/>
       <columns name="all_out"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="ParetoChart.rptdesign" path="/MaximoApp/Report Designs/ParetoChart.rptdesign" libraries="//@files.6 //@files.0">
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="ParetoChart.rptdesign" path="/MaximoApp/Report Designs/ParetoChart.rptdesign" libraries="//@files.7 //@files.0">
     <dataSets name="Operation Data Set">
       <columns name="Failure Code"/>
       <columns name="Failures"/>
@@ -177,7 +300,7 @@
       <columns name="Operation" expression="BirtMath.round(row[&quot;RunningT&quot;]/row[&quot;TFailures&quot;]*100)"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="maximo inventory chart.rptdesign" path="/MaximoApp/Report Designs/maximo inventory chart.rptdesign" libraries="//@files.6 //@files.0">
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="maximo inventory chart.rptdesign" path="/MaximoApp/Report Designs/maximo inventory chart.rptdesign" libraries="//@files.7 //@files.0">
     <dataSets name="Monthly data">
       <columns name="dateall"/>
       <columns name="datemonth"/>
@@ -194,8 +317,8 @@
       <columns name="ViewDate" expression="row[&quot;dateyear&quot;]+'  '+row[&quot;monthname&quot;]"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd Detail Actuate.rptdesign" path="/MaximoApp/Report Designs/WorkOrd Detail Actuate.rptdesign" libraries="//@files.6 //@files.0">
-    <linkedFromReportsMap key="//@files.24" value="1"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd Detail Actuate.rptdesign" path="/MaximoApp/Report Designs/WorkOrd Detail Actuate.rptdesign" libraries="//@files.7 //@files.0">
+    <linkedFromReportsMap key="//@files.25" value="1"/>
     <dataSets name="Work Order Detail Data Set">
       <columns name="seq"/>
       <columns name="Region"/>
@@ -212,27 +335,10 @@
       <columns name="Category"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd by Cause.rptdesign" path="/MaximoApp/Report Designs/WorkOrd by Cause.rptdesign" libraries="//@files.6 //@files.0">
-    <dataSets name="Work Order Detail Data Set">
-      <columns name="seq"/>
-      <columns name="Region"/>
-      <columns name="Facility"/>
-      <columns name="Work Order Number"/>
-      <columns name="Supervisor"/>
-      <columns name="Phone Ext"/>
-      <columns name="Asset Tag"/>
-      <columns name="Asset Description"/>
-      <columns name="Estimated Hours"/>
-      <columns name="Actual Hours"/>
-      <columns name="Priority"/>
-      <columns name="Labor and Material Cost"/>
-      <columns name="Category"/>
-    </dataSets>
-  </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WOTXT.rptdesign" path="/MaximoApp/Report Designs/WOTXT.rptdesign" libraries="//@files.6 //@files.0">
-    <linkedToReportsMap key="59" value="//@files.16"/>
-    <linkedToReportsMap key="60" value="//@files.16"/>
-    <linkedToReportsMap key="61" value="//@files.16"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WOTXT.rptdesign" path="/MaximoApp/Report Designs/WOTXT.rptdesign" libraries="//@files.7 //@files.0">
+    <linkedToReportsMap key="59" value="//@files.18"/>
+    <linkedToReportsMap key="60" value="//@files.18"/>
+    <linkedToReportsMap key="61" value="//@files.18"/>
     <dataSets name="WO TXT Data Set">
       <columns name="t1"/>
       <columns name="t2"/>
@@ -255,9 +361,9 @@
       <columns name="n9"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Priority Closed.rptdesign" path="/MaximoApp/Report Designs/Priority Closed.rptdesign" libraries="//@files.6 //@files.0">
-    <linkedToReportsMap key="92" value="//@files.14"/>
-    <linkedToReportsMap key="86" value="//@files.21"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Priority Closed.rptdesign" path="/MaximoApp/Report Designs/Priority Closed.rptdesign" libraries="//@files.7 //@files.0">
+    <linkedToReportsMap key="92" value="//@files.15"/>
+    <linkedToReportsMap key="86" value="//@files.23"/>
     <dataSets name="Priority closed Data Set">
       <columns name="t1"/>
       <columns name="t2"/>

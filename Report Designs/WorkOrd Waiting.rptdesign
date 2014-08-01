@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">8</property>
+        </structure>
+        <structure>
+            <property name="name">queryTimeOut</property>
+            <property name="id">8</property>
+        </structure>
+        <structure>
+            <property name="name">rowFetchSize</property>
+            <property name="id">8</property>
+        </structure>
+    </list-property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="layoutPreference">auto layout</property>
@@ -16,6 +30,17 @@
             <property name="namespace">ThemesReportItems3</property>
         </structure>
     </list-property>
+    <method name="onContentUpdate"><![CDATA[var uiOptions = this.getViewer().getUIOptions();
+
+// Remove ability for user to change interactivity options
+uiOptions.enableEditReport(false);
+
+// Set the modified UI Options back into the Viewer
+this.getViewer().setUIOptions(uiOptions);
+
+// If Interactivity is not enabled, enable it
+if (!this.getViewer().isInteractive())
+	this.getViewer().enableIV();]]></method>
     <parameters>
         <scalar-parameter name="cnt" id="92">
             <property name="valueType">static</property>
@@ -52,6 +77,7 @@
     </data-sources>
     <data-sets>
         <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Work Order Detail Data Set" id="8">
+            <property name="nullsOrdering">nulls lowest</property>
             <list-property name="columnHints">
                 <structure>
                     <property name="columnName">seq</property>
@@ -734,13 +760,6 @@
             <property name="type">custom</property>
             <property name="height">12in</property>
             <property name="width">14in</property>
-            <page-footer>
-                <text id="3">
-                    <property name="textAlign">left</property>
-                    <property name="contentType">html</property>
-                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
-                </text>
-            </page-footer>
         </simple-master-page>
     </page-setup>
     <body>
@@ -849,21 +868,24 @@
                 <property name="width">0.6770833333333334in</property>
             </column>
             <header>
-                <row id="225">
+                <row id="236">
+                    <property name="backgroundColor">#0079C1</property>
                     <property name="verticalAlign">middle</property>
-                    <property name="height">0.625in</property>
-                    <cell id="226">
+                    <property name="height">0.425in</property>
+                    <cell id="237">
                         <property name="colSpan">11</property>
                         <property name="rowSpan">1</property>
+                        <property name="backgroundColor">#0079C1</property>
                         <property name="verticalAlign">middle</property>
-                        <text-data id="106">
+                        <text-data id="235">
                             <property name="backgroundColor">#0079C1</property>
                             <property name="fontFamily">"Verdana"</property>
-                            <property name="fontSize">10pt</property>
+                            <property name="fontSize">12pt</property>
                             <property name="fontWeight">bold</property>
                             <property name="color">white</property>
+                            <property name="marginBottom">5pt</property>
                             <property name="textAlign">center</property>
-                            <expression name="valueExpr">params["cnt"].value+'  Work Orders are '+params["ReasonName"].value</expression>
+                            <expression name="valueExpr">params["cnt"].value+'  Work Orders '+params["ReasonName"].value</expression>
                             <property name="contentType">html</property>
                         </text-data>
                     </cell>
@@ -871,85 +893,96 @@
                 <row id="108">
                     <property name="backgroundColor">#E6E6E6</property>
                     <property name="verticalAlign">middle</property>
-                    <property name="height">0.625in</property>
+                    <property name="height">0.425in</property>
                     <cell id="109">
-                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="backgroundColor">#EDEEF3</property>
                         <property name="verticalAlign">middle</property>
                         <label id="184">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <text-property name="text">Region</text-property>
                         </label>
                     </cell>
                     <cell id="110">
-                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="backgroundColor">#EDEEF3</property>
                         <label id="186">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <text-property name="text">Facility</text-property>
                         </label>
                     </cell>
                     <cell id="111">
-                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="backgroundColor">#EDEEF3</property>
                         <label id="188">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <text-property name="text">Supervisor</text-property>
                         </label>
                     </cell>
                     <cell id="113">
-                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="backgroundColor">#EDEEF3</property>
                         <label id="192">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <text-property name="text">Work Order</text-property>
                         </label>
                     </cell>
                     <cell id="114">
-                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="backgroundColor">#EDEEF3</property>
                         <label id="194">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <text-property name="text">Asset Tag</text-property>
                         </label>
                     </cell>
                     <cell id="115">
-                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="backgroundColor">#EDEEF3</property>
                         <label id="196">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <text-property name="text">Asset Description</text-property>
                         </label>
                     </cell>
                     <cell id="116">
-                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="backgroundColor">#EDEEF3</property>
                         <label id="198">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <property name="textAlign">center</property>
                             <text-property name="text">Estimated Hours</text-property>
                         </label>
                     </cell>
                     <cell id="117">
-                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="backgroundColor">#EDEEF3</property>
                         <label id="200">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <property name="textAlign">center</property>
                             <text-property name="text">Actual Hours</text-property>
                         </label>
                     </cell>
                     <cell id="118">
-                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="backgroundColor">#EDEEF3</property>
                         <label id="202">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <property name="textAlign">center</property>
                             <text-property name="text">Priority</text-property>
                         </label>
                     </cell>
                     <cell id="204">
-                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="backgroundColor">#EDEEF3</property>
                         <label id="211">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <property name="textAlign">center</property>
                             <text-property name="text">Labor &amp; Material </text-property>
                         </label>
                     </cell>
                     <cell id="213">
-                        <property name="backgroundColor">#E6E6E6</property>
+                        <property name="backgroundColor">#EDEEF3</property>
                         <label id="221">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <property name="textAlign">center</property>
                             <text-property name="text">Category</text-property>
@@ -971,6 +1004,7 @@
                     </list-property>
                     <cell id="120">
                         <data id="185">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">justify</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Region</property>
@@ -978,6 +1012,7 @@
                     </cell>
                     <cell id="121">
                         <data id="187">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">justify</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Facility</property>
@@ -985,6 +1020,7 @@
                     </cell>
                     <cell id="122">
                         <data id="189">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">justify</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Supervisor</property>
@@ -992,6 +1028,7 @@
                     </cell>
                     <cell id="124">
                         <data id="193">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">center</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Work Order Number</property>
@@ -999,6 +1036,7 @@
                     </cell>
                     <cell id="125">
                         <data id="195">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">center</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Asset Tag</property>
@@ -1006,6 +1044,7 @@
                     </cell>
                     <cell id="126">
                         <data id="197">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">justify</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Asset Description</property>
@@ -1013,6 +1052,7 @@
                     </cell>
                     <cell id="127">
                         <data id="199">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">right</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Estimated Hours</property>
@@ -1020,6 +1060,7 @@
                     </cell>
                     <cell id="128">
                         <data id="201">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">right</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Actual Hours</property>
@@ -1027,6 +1068,7 @@
                     </cell>
                     <cell id="129">
                         <data id="203">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">center</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Priority</property>
@@ -1034,6 +1076,7 @@
                     </cell>
                     <cell id="205">
                         <data id="212">
+                            <property name="fontSize">8pt</property>
                             <structure name="numberFormat">
                                 <property name="category">Currency</property>
                                 <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
@@ -1045,6 +1088,7 @@
                     </cell>
                     <cell id="214">
                         <data id="222">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">center</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Category</property>

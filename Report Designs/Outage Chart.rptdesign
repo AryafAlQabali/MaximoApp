@@ -14,6 +14,10 @@
             <property name="fileName">Maximo.rptlibrary</property>
             <property name="namespace">Maximo</property>
         </structure>
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
     </list-property>
     <parameters>
         <scalar-parameter name="SharedDate" id="66">
@@ -551,9 +555,10 @@
             <row id="92">
                 <cell id="93">
                     <text id="87">
-                        <property name="fontFamily">"Arial"</property>
-                        <property name="fontSize">8pt</property>
+                        <property name="fontFamily">"Verdana"</property>
+                        <property name="fontSize">9pt</property>
                         <property name="fontWeight">bold</property>
+                        <property name="color">#666666</property>
                         <property name="textAlign">center</property>
                         <property name="contentType">html</property>
                         <text-property name="content"><![CDATA[Critical Minutes Lost in <VALUE-OF>row["the_month"]</VALUE-OF>
@@ -580,9 +585,9 @@
   <gadgetPartsSupportingEffects _body="trendmarkers"/>
   <gadgetPartsSupportingEffects _body="tooltip"/>
   <scale autoAdjustMajorTickMarks="true" majorTickMarksCount="5" max="100" min="0" minorTickMarksCount="4"/>
-  <region color="9acc00" endValue="35.0" label="A" startValue="0.0" transparency="255"/>
-  <region color="33cccc" endValue="80.0" label="B" startValue="35.0" transparency="255"/>
-  <region color="ff6464" endValue="130.0" label="C" startValue="80.0" transparency="255"/>
+  <region color="97d15e" endValue="35.0" label="A" startValue="0.0" transparency="255"/>
+  <region color="f5db70" endValue="80.0" label="B" startValue="35.0" transparency="255"/>
+  <region color="de5843" endValue="130.0" label="C" startValue="80.0" transparency="255"/>
   <thresholds isDashed="false" isTrendZone="false" length="40" lineWidth="4" markerRadius="4" showMarker="false" showValueOnTop="true" transparency="255"/>
   <ticks maxLabel="" minLabel="" placeTicksInside="false" placeValuesInside="false" showLimits="true" showTickMarks="true" showTickValues="true" ticksBelowGauge="true" ticksOnRight="false">
    <major height="8" width="1"/>
@@ -632,9 +637,10 @@
             <row id="94">
                 <cell id="95">
                     <text id="88">
-                        <property name="fontFamily">"Arial"</property>
-                        <property name="fontSize">8pt</property>
+                        <property name="fontFamily">"Verdana"</property>
+                        <property name="fontSize">9pt</property>
                         <property name="fontWeight">bold</property>
+                        <property name="color">#666666</property>
                         <property name="textAlign">center</property>
                         <property name="contentType">html</property>
                         <text-property name="content"><![CDATA[All Minutes Lost in <VALUE-OF>row["the_month"]</VALUE-OF>]]></text-property>
@@ -642,7 +648,7 @@
                 </cell>
             </row>
             <row id="89">
-                <property name="height">1.4166666666666667in</property>
+                <property name="height">1.5in</property>
                 <cell id="90">
                     <extended-item extensionName="FlashGadgets" id="76">
                         <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="1.0">
@@ -660,9 +666,9 @@
   <gadgetPartsSupportingEffects _body="trendmarkers"/>
   <gadgetPartsSupportingEffects _body="tooltip"/>
   <scale autoAdjustMajorTickMarks="true" majorTickMarksCount="5" max="100" min="0" minorTickMarksCount="4"/>
-  <region color="9acc00" endValue="100.0" label="A" startValue="0.0" transparency="255"/>
-  <region color="33cccc" endValue="200.0" label="B" startValue="100.0" transparency="255"/>
-  <region color="ff6464" endValue="300.0" label="C" startValue="200.0"/>
+  <region color="97d15e" endValue="100.0" label="A" startValue="0.0" transparency="255"/>
+  <region color="f5db70" endValue="200.0" label="B" startValue="100.0" transparency="255"/>
+  <region color="de5843" endValue="300.0" label="C" startValue="200.0"/>
   <thresholds isDashed="false" isTrendZone="false" length="40" lineWidth="4" markerRadius="4" showMarker="false" showValue="false" showValueOnTop="true" transparency="255"/>
   <ticks maxLabel="" minLabel="" placeTicksInside="false" placeValuesInside="false" showLimits="true" showTickMarks="true" showTickValues="true" ticksBelowGauge="true" ticksOnRight="false">
    <major height="8" width="1"/>

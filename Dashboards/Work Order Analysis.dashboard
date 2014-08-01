@@ -860,7 +860,7 @@ union
   <extendedProperties name="jschart.glass.style" value="false"/>
   <extendedProperties name="jschart.zoom" value="xy"/>
   <extendedProperties name="enable.drill.proc_" value="true"/>
-  <extendedProperties name="drilled.filters_" value="_@,_"/>
+  <extendedProperties name="drilled.filters_" value="row[&quot;Category&quot;]eq&quot;SM&quot;_@,__@,_"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="2.3"/>
@@ -874,7 +874,7 @@ union
     <color _body=",128,127,127,127"/>
    </outline>
   </emptyMessage>
-  <axes type="2" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
+  <axes type="0" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
    <title visible="false">
     <caption value="">
      <font size="10.0" bold="false" italic="false" underline="false" rotation="90.0"/>
@@ -956,7 +956,7 @@ union
        <color _nil="1"/>
       </outline>
      </label>
-     <dataDefinition definition="row[&quot;Category&quot;]"/>
+     <dataDefinition definition="row[&quot;Asset Tag&quot;]"/>
      <curveFitting _nil="1"/>
     </series>
     <grouping enabled="true" groupingInterval="0.0"/>
@@ -1012,6 +1012,13 @@ union
                     <expression name="expr">dataSetRow["Work Order Number"]</expression>
                     <property name="filterTarget">DataSet</property>
                     <property name="type">slicer</property>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Category"]</expression>
+                    <simple-property-list name="value1">
+                        <value>"SM"</value>
+                    </simple-property-list>
                 </structure>
             </list-property>
             <property name="height">197.25pt</property>

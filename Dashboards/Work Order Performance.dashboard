@@ -52,7 +52,7 @@
                                             <property name="controlType">list-box</property>
                                             <property name="dataType">string</property>
                                             <simple-property-list name="selectedValues">
-                                                <value>2013-12-25 09:20:22.007</value>
+                                                <value>2013-10-01 10:03:44.477</value>
                                             </simple-property-list>
                                             <property name="orientation">horizontal</property>
                                             <property name="autoAdjust">false</property>
