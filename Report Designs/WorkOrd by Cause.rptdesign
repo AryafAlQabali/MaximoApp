@@ -4045,6 +4045,7 @@ if (!this.getViewer().isInteractive())
                     <property name="color">white</property>
                     <property name="marginBottom">5pt</property>
                     <property name="paddingTop">15pt</property>
+                    <property name="paddingBottom">15pt</property>
                     <property name="textAlign">center</property>
                     <expression name="valueExpr">'  Work Orders Caused by  '+params["CauseParameter"].value + ' Issues'</expression>
                     <property name="contentType">html</property>
@@ -4384,7 +4385,7 @@ if (!this.getViewer().isInteractive())
      <query definition="">
       <grouping/>
      </query>
-     <series _type="BarSeries" seriesIdentifier="Actual" riser="0">
+     <series _type="BarSeries" seriesIdentifier="Estimated" riser="0">
       <label>
        <background _nil="1"/>
        <outline>
@@ -4407,7 +4408,7 @@ if (!this.getViewer().isInteractive())
      <query definition="">
       <grouping/>
      </query>
-     <series _type="BarSeries" seriesIdentifier="Estimated" riser="0">
+     <series _type="BarSeries" seriesIdentifier="Actual" riser="0">
       <label>
        <background _nil="1"/>
        <outline>
@@ -4727,6 +4728,7 @@ if (!this.getViewer().isInteractive())
                     <row id="956">
                         <property name="pageBreakAfter">always</property>
                         <cell id="957">
+                            <property name="backgroundColor">#EDEEF3</property>
                             <property name="color">white</property>
                             <data id="968">
                                 <property name="fontSize">8pt</property>
@@ -4736,6 +4738,7 @@ if (!this.getViewer().isInteractive())
                             </data>
                         </cell>
                         <cell id="958">
+                            <property name="backgroundColor">#EDEEF3</property>
                             <property name="color">white</property>
                         </cell>
                         <cell id="959">

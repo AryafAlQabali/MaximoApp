@@ -114,7 +114,7 @@
     <targetDashboardsMap key="//@files.13" value="1"/>
   </files>
   <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Scorecard Overall Performance.dashboard" path="/MaximoApp/Dashboards/Scorecard Overall Performance.dashboard"/>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="Maximo.rptlibrary" path="/MaximoApp/Maximo.rptlibrary" reports="//@files.18 //@files.19 //@files.20 //@files.21 //@files.22 //@files.23 //@files.24 //@files.25"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="Maximo.rptlibrary" path="/MaximoApp/Maximo.rptlibrary" reports="//@files.18 //@files.19 //@files.20 //@files.21 //@files.22 //@files.23 //@files.24"/>
   <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Facilities Book.dashboard" path="/MaximoApp/Dashboards/Facilities Book.dashboard"/>
   <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Maximo Dashboard.dashboard" path="/MaximoApp/Dashboards/Maximo Dashboard.dashboard"/>
   <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Today's Workorders.dashboard" path="/MaximoApp/Dashboards/Today's Workorders.dashboard"/>
@@ -199,7 +199,7 @@
     </dataSets>
   </files>
   <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd Detail Maximo.rptdesign" path="/MaximoApp/Report Designs/WorkOrd Detail Maximo.rptdesign" libraries="//@files.0">
-    <linkedFromReportsMap key="//@files.25" value="1"/>
+    <linkedFromReportsMap key="//@files.24" value="1"/>
     <dataSets name="Work Order Detail Data Set">
       <columns name="seq"/>
       <columns name="Region"/>
@@ -249,7 +249,7 @@
     </dataSets>
   </files>
   <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd Waiting.rptdesign" path="/MaximoApp/Report Designs/WorkOrd Waiting.rptdesign" libraries="//@files.7 //@files.0">
-    <linkedFromReportsMap key="//@files.24" value="3"/>
+    <linkedFromReportsMap key="//@files.23" value="3"/>
     <dataSets name="Work Order Detail Data Set">
       <columns name="seq"/>
       <columns name="Region"/>
@@ -317,24 +317,6 @@
       <columns name="ViewDate" expression="row[&quot;dateyear&quot;]+'  '+row[&quot;monthname&quot;]"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd Detail Actuate.rptdesign" path="/MaximoApp/Report Designs/WorkOrd Detail Actuate.rptdesign" libraries="//@files.7 //@files.0">
-    <linkedFromReportsMap key="//@files.25" value="1"/>
-    <dataSets name="Work Order Detail Data Set">
-      <columns name="seq"/>
-      <columns name="Region"/>
-      <columns name="Facility"/>
-      <columns name="Work Order Number"/>
-      <columns name="Supervisor"/>
-      <columns name="Phone Ext"/>
-      <columns name="Asset Tag"/>
-      <columns name="Asset Description"/>
-      <columns name="Estimated Hours"/>
-      <columns name="Actual Hours"/>
-      <columns name="Priority"/>
-      <columns name="Labor and Material Cost"/>
-      <columns name="Category"/>
-    </dataSets>
-  </files>
   <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WOTXT.rptdesign" path="/MaximoApp/Report Designs/WOTXT.rptdesign" libraries="//@files.7 //@files.0">
     <linkedToReportsMap key="59" value="//@files.18"/>
     <linkedToReportsMap key="60" value="//@files.18"/>
@@ -363,7 +345,6 @@
   </files>
   <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Priority Closed.rptdesign" path="/MaximoApp/Report Designs/Priority Closed.rptdesign" libraries="//@files.7 //@files.0">
     <linkedToReportsMap key="92" value="//@files.15"/>
-    <linkedToReportsMap key="86" value="//@files.23"/>
     <dataSets name="Priority closed Data Set">
       <columns name="t1"/>
       <columns name="t2"/>
@@ -385,6 +366,23 @@
       <columns name="n8"/>
       <columns name="n9"/>
       <columns name="n10"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="WorkOrd Detail Actuate.rptdesign" path="/MaximoApp/Report Designs/WorkOrd Detail Actuate.rptdesign" libraries="//@files.0">
+    <dataSets name="Work Order Detail Data Set">
+      <columns name="seq"/>
+      <columns name="Region"/>
+      <columns name="Facility"/>
+      <columns name="Work Order Number"/>
+      <columns name="Supervisor"/>
+      <columns name="Phone Ext"/>
+      <columns name="Asset Tag"/>
+      <columns name="Asset Description"/>
+      <columns name="Estimated Hours"/>
+      <columns name="Actual Hours"/>
+      <columns name="Priority"/>
+      <columns name="Labor and Material Cost"/>
+      <columns name="Category"/>
     </dataSets>
   </files>
 </com.actuate.istudio.analysis.model:Project>

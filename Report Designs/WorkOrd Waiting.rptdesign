@@ -760,6 +760,19 @@ if (!this.getViewer().isInteractive())
             <property name="type">custom</property>
             <property name="height">12in</property>
             <property name="width">14in</property>
+            <page-header>
+                <text-data id="235">
+                    <property name="backgroundColor">#0079C1</property>
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontSize">12pt</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">white</property>
+                    <property name="marginBottom">5pt</property>
+                    <property name="textAlign">center</property>
+                    <expression name="valueExpr">params["cnt"].value+'  Work Orders '+params["ReasonName"].value</expression>
+                    <property name="contentType">html</property>
+                </text-data>
+            </page-header>
         </simple-master-page>
     </page-setup>
     <body>
@@ -868,26 +881,293 @@ if (!this.getViewer().isInteractive())
                 <property name="width">0.6770833333333334in</property>
             </column>
             <header>
-                <row id="236">
+                <row id="238">
                     <property name="backgroundColor">#0079C1</property>
                     <property name="verticalAlign">middle</property>
                     <property name="height">0.425in</property>
-                    <cell id="237">
+                    <cell id="239">
                         <property name="colSpan">11</property>
                         <property name="rowSpan">1</property>
-                        <property name="backgroundColor">#0079C1</property>
+                        <property name="backgroundColor">white</property>
                         <property name="verticalAlign">middle</property>
-                        <text-data id="235">
-                            <property name="backgroundColor">#0079C1</property>
-                            <property name="fontFamily">"Verdana"</property>
-                            <property name="fontSize">12pt</property>
-                            <property name="fontWeight">bold</property>
-                            <property name="color">white</property>
-                            <property name="marginBottom">5pt</property>
-                            <property name="textAlign">center</property>
-                            <expression name="valueExpr">params["cnt"].value+'  Work Orders '+params["ReasonName"].value</expression>
-                            <property name="contentType">html</property>
-                        </text-data>
+                        <extended-item extensionName="Chart" id="993">
+                            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,816.0,130.0"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="A, B, C"/>
+   <orthogonalSampleData dataSetRepresentation="5,4,12" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="10.0,8.0,24.0" seriesDefinitionIndex="1"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes>
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition="">
+      <grouping/>
+     </query>
+     <series _type="BarSeries" seriesIdentifier="Actual" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="))bre(([Estimated Hours]">
+       <grouping enabled="true"/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+     <grouping _nil="1"/>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition="">
+      <grouping/>
+     </query>
+     <series _type="BarSeries" seriesIdentifier="Estimated" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="))bre(([Actual Hours]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Region&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                            <property name="outputFormat">JS</property>
+                            <property name="inheritColumns">false</property>
+                            <property name="marginTop">auto</property>
+                            <property name="marginBottom">auto</property>
+                            <property name="height">2.8958333333333335in</property>
+                            <property name="width">10in</property>
+                            <property name="dataSet">Work Order Detail Data Set</property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">seq</property>
+                                    <expression name="expression" type="javascript">dataSetRow["seq"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Region</property>
+                                    <expression name="expression" type="javascript">dataSetRow["Region"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Facility</property>
+                                    <expression name="expression" type="javascript">dataSetRow["Facility"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Work Order Number</property>
+                                    <expression name="expression" type="javascript">dataSetRow["Work Order Number"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Supervisor</property>
+                                    <expression name="expression" type="javascript">dataSetRow["Supervisor"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Phone Ext</property>
+                                    <expression name="expression" type="javascript">dataSetRow["Phone Ext"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Asset Tag</property>
+                                    <expression name="expression" type="javascript">dataSetRow["Asset Tag"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Asset Description</property>
+                                    <expression name="expression" type="javascript">dataSetRow["Asset Description"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Estimated Hours</property>
+                                    <expression name="expression" type="javascript">dataSetRow["Estimated Hours"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Actual Hours</property>
+                                    <expression name="expression" type="javascript">dataSetRow["Actual Hours"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Priority</property>
+                                    <expression name="expression" type="javascript">dataSetRow["Priority"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Labor and Material Cost</property>
+                                    <expression name="expression" type="javascript">dataSetRow["Labor and Material Cost"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Category</property>
+                                    <expression name="expression" type="javascript">dataSetRow["Category"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                            </list-property>
+                            <property name="theme">ThemesReportItems3.Modern</property>
+                        </extended-item>
                     </cell>
                 </row>
                 <row id="108">
