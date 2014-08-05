@@ -16,14 +16,17 @@
             <property name="namespace">ThemesReportItems3</property>
         </structure>
     </list-property>
-    <method name="onContentUpdate"><![CDATA[debugger;
-var reportWidth = this.getViewer().getWidth();
+    <method name="onContentUpdate"><![CDATA[var uiOptions = this.getViewer().getUIOptions();
 
-var chart = this.getViewer().getChart();
+// Remove ability for user to change interactivity options
+uiOptions.enableEditReport(false);
 
-var chartHeight = $("div", $(chart.getHtmlDom())).height();
+// Set the modified UI Options back into the Viewer
+this.getViewer().setUIOptions(uiOptions);
 
-chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
+// If Interactivity is not enabled, enable it
+if (!this.getViewer().isInteractive())
+	this.getViewer().enableIV();]]></method>
     <parameters>
         <scalar-parameter name="Param_Year" id="298">
             <property name="valueType">static</property>
@@ -891,9 +894,11 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                 <cell id="104">
                     <text-data id="306">
                         <property name="fontFamily">"Verdana"</property>
-                        <property name="fontSize">10pt</property>
+                        <property name="fontSize">12pt</property>
                         <property name="fontWeight">bold</property>
                         <property name="color">white</property>
+                        <property name="marginTop">15pt</property>
+                        <property name="marginBottom">0pt</property>
                         <property name="textAlign">center</property>
                         <expression name="valueExpr">'Works Orders for the Year: '+params["Param_Year"].value</expression>
                         <property name="contentType">html</property>
@@ -909,8 +914,10 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                         <property name="fontSize">10pt</property>
                         <property name="fontWeight">bold</property>
                         <property name="color">white</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="marginBottom">0pt</property>
                         <property name="textAlign">center</property>
-                        <expression name="valueExpr">'Region: '+params["Param_Region"].value</expression>
+                        <expression name="valueExpr">'Region : '+params["Param_Region"].value</expression>
                         <property name="contentType">html</property>
                     </text-data>
                 </cell>
@@ -925,7 +932,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                         <property name="fontWeight">bold</property>
                         <property name="color">white</property>
                         <property name="textAlign">center</property>
-                        <expression name="valueExpr">'Supervisor: '+params["Param_supervisor"].value</expression>
+                        <expression name="valueExpr">'Supervisor : '+params["Param_supervisor"].value</expression>
                         <property name="contentType">html</property>
                     </text-data>
                 </cell>
@@ -939,8 +946,10 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                         <property name="fontSize">10pt</property>
                         <property name="fontWeight">bold</property>
                         <property name="color">white</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="marginBottom">0pt</property>
                         <property name="textAlign">center</property>
-                        <expression name="valueExpr">'Category: '+params["Param_category"].value</expression>
+                        <expression name="valueExpr">' Category  : '+params["Param_category"].value</expression>
                         <property name="contentType">html</property>
                     </text-data>
                 </cell>
@@ -1181,6 +1190,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                         <property name="backgroundColor">#E6E6E6</property>
                         <property name="verticalAlign">middle</property>
                         <label id="184">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <text-property name="text">Region</text-property>
                         </label>
@@ -1188,6 +1198,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     <cell id="110">
                         <property name="backgroundColor">#E6E6E6</property>
                         <label id="186">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <text-property name="text">Facility</text-property>
                         </label>
@@ -1195,6 +1206,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     <cell id="111">
                         <property name="backgroundColor">#E6E6E6</property>
                         <label id="188">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <text-property name="text">Supervisor</text-property>
                         </label>
@@ -1202,6 +1214,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     <cell id="113">
                         <property name="backgroundColor">#E6E6E6</property>
                         <label id="192">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <text-property name="text">Work Order</text-property>
                         </label>
@@ -1209,6 +1222,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     <cell id="114">
                         <property name="backgroundColor">#E6E6E6</property>
                         <label id="194">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <text-property name="text">Asset Tag</text-property>
                         </label>
@@ -1216,6 +1230,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     <cell id="115">
                         <property name="backgroundColor">#E6E6E6</property>
                         <label id="196">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <text-property name="text">Asset Description</text-property>
                         </label>
@@ -1223,6 +1238,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     <cell id="116">
                         <property name="backgroundColor">#E6E6E6</property>
                         <label id="198">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <property name="textAlign">center</property>
                             <text-property name="text">Estimated Hours</text-property>
@@ -1231,6 +1247,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     <cell id="117">
                         <property name="backgroundColor">#E6E6E6</property>
                         <label id="200">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <property name="textAlign">center</property>
                             <text-property name="text">Actual Hours</text-property>
@@ -1239,6 +1256,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     <cell id="275">
                         <property name="backgroundColor">#E6E6E6</property>
                         <label id="287">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <property name="textAlign">center</property>
                             <text-property name="text">Diff</text-property>
@@ -1247,6 +1265,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     <cell id="118">
                         <property name="backgroundColor">#E6E6E6</property>
                         <label id="202">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <property name="textAlign">center</property>
                             <text-property name="text">Priority</text-property>
@@ -1255,6 +1274,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     <cell id="204">
                         <property name="backgroundColor">#E6E6E6</property>
                         <label id="211">
+                            <property name="fontSize">8pt</property>
                             <property name="color">#666666</property>
                             <property name="textAlign">center</property>
                             <text-property name="text">Labor &amp; Material </text-property>
@@ -1287,6 +1307,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     <row id="224">
                         <cell id="225">
                             <data id="248">
+                                <property name="fontSize">8pt</property>
                                 <property name="resultSetColumn">Region</property>
                             </data>
                         </cell>
@@ -1322,6 +1343,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                         <cell id="251"/>
                         <cell id="252">
                             <data id="274">
+                                <property name="fontSize">8pt</property>
                                 <property name="resultSetColumn">Facility</property>
                             </data>
                         </cell>
@@ -1348,6 +1370,9 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                         <cell id="268"/>
                         <cell id="269">
                             <data id="293">
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="color">#666666</property>
                                 <structure name="numberFormat">
                                     <property name="category">Fixed</property>
                                     <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
@@ -1358,6 +1383,9 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                         </cell>
                         <cell id="270">
                             <data id="292">
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="color">#666666</property>
                                 <structure name="numberFormat">
                                     <property name="category">Fixed</property>
                                     <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
@@ -1368,6 +1396,9 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                         </cell>
                         <cell id="282">
                             <data id="297">
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="color">#666666</property>
                                 <structure name="numberFormat">
                                     <property name="category">Fixed</property>
                                     <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
@@ -1379,6 +1410,9 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                         <cell id="271"/>
                         <cell id="272">
                             <data id="291">
+                                <property name="fontSize">8pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="color">#666666</property>
                                 <structure name="numberFormat">
                                     <property name="category">Currency</property>
                                     <property name="pattern">$#,##0{RoundingMode=HALF_UP}</property>
@@ -1407,6 +1441,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     <cell id="121"/>
                     <cell id="122">
                         <data id="189">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">justify</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Supervisor</property>
@@ -1414,6 +1449,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     </cell>
                     <cell id="124">
                         <data id="193">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">center</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Work Order Number</property>
@@ -1421,6 +1457,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     </cell>
                     <cell id="125">
                         <data id="195">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">center</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Asset Tag</property>
@@ -1428,6 +1465,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     </cell>
                     <cell id="126">
                         <data id="197">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">justify</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Asset Description</property>
@@ -1435,6 +1473,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     </cell>
                     <cell id="127">
                         <data id="199">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">right</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Estimated Hours</property>
@@ -1442,6 +1481,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     </cell>
                     <cell id="128">
                         <data id="201">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">right</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Actual Hours</property>
@@ -1449,6 +1489,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     </cell>
                     <cell id="278">
                         <data id="296">
+                            <property name="fontSize">8pt</property>
                             <structure name="numberFormat">
                                 <property name="category">Fixed</property>
                                 <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
@@ -1471,6 +1512,7 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     </cell>
                     <cell id="129">
                         <data id="203">
+                            <property name="fontSize">8pt</property>
                             <property name="textAlign">center</property>
                             <property name="whiteSpace">nowrap</property>
                             <property name="resultSetColumn">Priority</property>
@@ -1478,9 +1520,10 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     </cell>
                     <cell id="205">
                         <data id="212">
+                            <property name="fontSize">8pt</property>
                             <structure name="numberFormat">
                                 <property name="category">Currency</property>
-                                <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                                <property name="pattern">$ #,##0{RoundingMode=HALF_UP}</property>
                             </structure>
                             <property name="textAlign">right</property>
                             <property name="whiteSpace">nowrap</property>
@@ -1496,22 +1539,6 @@ chart.getClientChart().setSize(reportWidth - 20, chartHeight);]]></method>
                     </cell>
                 </row>
             </detail>
-            <footer>
-                <row id="163">
-                    <cell id="164"/>
-                    <cell id="165"/>
-                    <cell id="166"/>
-                    <cell id="168"/>
-                    <cell id="169"/>
-                    <cell id="170"/>
-                    <cell id="171"/>
-                    <cell id="172"/>
-                    <cell id="284"/>
-                    <cell id="173"/>
-                    <cell id="209"/>
-                    <cell id="218"/>
-                </row>
-            </footer>
         </table>
     </body>
     <list-property name="images">

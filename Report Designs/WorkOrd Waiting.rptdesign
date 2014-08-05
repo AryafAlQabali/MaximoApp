@@ -761,15 +761,22 @@ if (!this.getViewer().isInteractive())
             <property name="height">12in</property>
             <property name="width">14in</property>
             <page-header>
-                <text-data id="235">
+                <text-data id="1010">
                     <property name="backgroundColor">#0079C1</property>
                     <property name="fontFamily">"Verdana"</property>
                     <property name="fontSize">12pt</property>
                     <property name="fontWeight">bold</property>
                     <property name="color">white</property>
-                    <property name="marginBottom">5pt</property>
+                    <property name="borderBottomStyle">none</property>
+                    <property name="borderLeftStyle">none</property>
+                    <property name="borderRightStyle">none</property>
+                    <property name="borderTopStyle">none</property>
+                    <property name="marginTop">0pt</property>
+                    <property name="marginBottom">15pt</property>
+                    <property name="paddingTop">15pt</property>
+                    <property name="paddingBottom">15pt</property>
                     <property name="textAlign">center</property>
-                    <expression name="valueExpr">params["cnt"].value+'  Work Orders '+params["ReasonName"].value</expression>
+                    <expression name="valueExpr">params["cnt"].value+ ' Work Orders '+params["ReasonName"].value</expression>
                     <property name="contentType">html</property>
                 </text-data>
             </page-header>
@@ -777,6 +784,10 @@ if (!this.getViewer().isInteractive())
     </page-setup>
     <body>
         <table id="107">
+            <property name="borderBottomStyle">none</property>
+            <property name="borderLeftStyle">none</property>
+            <property name="borderRightStyle">none</property>
+            <property name="borderTopStyle">none</property>
             <property name="width">100%</property>
             <property name="dataSet">Work Order Detail Data Set</property>
             <property name="theme">ThemesReportItems3.Modern Table</property>
@@ -883,12 +894,20 @@ if (!this.getViewer().isInteractive())
             <header>
                 <row id="238">
                     <property name="backgroundColor">#0079C1</property>
+                    <property name="borderBottomStyle">none</property>
+                    <property name="borderLeftStyle">none</property>
+                    <property name="borderRightStyle">none</property>
+                    <property name="borderTopStyle">none</property>
                     <property name="verticalAlign">middle</property>
                     <property name="height">0.425in</property>
                     <cell id="239">
                         <property name="colSpan">11</property>
                         <property name="rowSpan">1</property>
                         <property name="backgroundColor">white</property>
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">none</property>
                         <property name="verticalAlign">middle</property>
                         <extended-item extensionName="Chart" id="993">
                             <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
@@ -973,7 +992,7 @@ if (!this.getViewer().isInteractive())
      <query definition="">
       <grouping/>
      </query>
-     <series _type="BarSeries" seriesIdentifier="Actual" riser="0">
+     <series _type="BarSeries" seriesIdentifier="Estimated" riser="0">
       <label>
        <background _nil="1"/>
        <outline>
@@ -996,7 +1015,7 @@ if (!this.getViewer().isInteractive())
      <query definition="">
       <grouping/>
      </query>
-     <series _type="BarSeries" seriesIdentifier="Estimated" riser="0">
+     <series _type="BarSeries" seriesIdentifier="Actual" riser="0">
       <label>
        <background _nil="1"/>
        <outline>
@@ -1094,6 +1113,10 @@ if (!this.getViewer().isInteractive())
 ]]></xml-property>
                             <property name="outputFormat">JS</property>
                             <property name="inheritColumns">false</property>
+                            <property name="borderTopStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderRightStyle">none</property>
                             <property name="marginTop">auto</property>
                             <property name="marginBottom">auto</property>
                             <property name="height">2.8958333333333335in</property>
@@ -1359,7 +1382,7 @@ if (!this.getViewer().isInteractive())
                             <property name="fontSize">8pt</property>
                             <structure name="numberFormat">
                                 <property name="category">Currency</property>
-                                <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                                <property name="pattern">$#,##0{RoundingMode=HALF_UP}</property>
                             </structure>
                             <property name="textAlign">right</property>
                             <property name="whiteSpace">nowrap</property>
@@ -1376,21 +1399,6 @@ if (!this.getViewer().isInteractive())
                     </cell>
                 </row>
             </detail>
-            <footer>
-                <row id="163">
-                    <cell id="164"/>
-                    <cell id="165"/>
-                    <cell id="166"/>
-                    <cell id="168"/>
-                    <cell id="169"/>
-                    <cell id="170"/>
-                    <cell id="171"/>
-                    <cell id="172"/>
-                    <cell id="173"/>
-                    <cell id="209"/>
-                    <cell id="218"/>
-                </row>
-            </footer>
         </table>
     </body>
     <list-property name="images">

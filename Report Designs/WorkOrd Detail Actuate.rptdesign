@@ -3986,17 +3986,18 @@ if (!this.getViewer().isInteractive())
             <property name="height">12in</property>
             <property name="width">14in</property>
             <page-header>
-                <text-data id="106">
+                <text-data id="1010">
                     <property name="backgroundColor">#0079C1</property>
                     <property name="fontFamily">"Verdana"</property>
                     <property name="fontSize">12pt</property>
                     <property name="fontWeight">bold</property>
                     <property name="color">white</property>
-                    <property name="marginTop">15pt</property>
+                    <property name="marginTop">0pt</property>
                     <property name="marginBottom">15pt</property>
-                    <property name="paddingTop">1pt</property>
+                    <property name="paddingTop">15pt</property>
+                    <property name="paddingBottom">15pt</property>
                     <property name="textAlign">center</property>
-                    <expression name="valueExpr" type="javascript">params["cnt"].value+'  Work Orders Closed in '+params["MonthName"].value</expression>
+                    <expression name="valueExpr">params["cnt"].value+ ' Work Orders Closed in '+params["MonthName"].value</expression>
                     <property name="contentType">html</property>
                 </text-data>
             </page-header>
@@ -4013,6 +4014,10 @@ if (!this.getViewer().isInteractive())
     </page-setup>
     <body>
         <table id="1055">
+            <property name="borderBottomStyle">none</property>
+            <property name="borderLeftStyle">none</property>
+            <property name="borderRightStyle">none</property>
+            <property name="borderTopStyle">none</property>
             <property name="width">100%</property>
             <property name="dataSet">Work Order Detail Data Set</property>
             <property name="theme">Modern Table</property>
@@ -4224,10 +4229,18 @@ if (!this.getViewer().isInteractive())
             </column>
             <header>
                 <row id="1162">
+                    <property name="borderBottomStyle">none</property>
+                    <property name="borderLeftStyle">none</property>
+                    <property name="borderRightStyle">none</property>
+                    <property name="borderTopStyle">none</property>
                     <cell id="1163">
                         <property name="colSpan">12</property>
                         <property name="rowSpan">1</property>
                         <property name="backgroundColor">white</property>
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">none</property>
                         <extended-item extensionName="Chart" id="993">
                             <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side">
@@ -4612,9 +4625,23 @@ if (!this.getViewer().isInteractive())
                     </cell>
                     <cell id="1186">
                         <property name="backgroundColor">white</property>
+                        <label id="1197">
+                            <property name="fontSize">8pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#666666</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Labor &amp; Material</text-property>
+                        </label>
                     </cell>
                     <cell id="1187">
                         <property name="backgroundColor">white</property>
+                        <label id="1198">
+                            <property name="fontSize">8pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#666666</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Category</text-property>
+                        </label>
                     </cell>
                 </row>
             </header>
@@ -4662,20 +4689,6 @@ if (!this.getViewer().isInteractive())
                         <cell id="1131"/>
                         <cell id="1132"/>
                         <cell id="1133"/>
-                    </row>
-                    <row id="1149">
-                        <cell id="1150"/>
-                        <cell id="1151"/>
-                        <cell id="1152"/>
-                        <cell id="1153"/>
-                        <cell id="1154"/>
-                        <cell id="1155"/>
-                        <cell id="1156"/>
-                        <cell id="1157"/>
-                        <cell id="1158"/>
-                        <cell id="1159"/>
-                        <cell id="1160"/>
-                        <cell id="1161"/>
                     </row>
                 </footer>
             </group>
@@ -4814,7 +4827,7 @@ if (!this.getViewer().isInteractive())
                         <data id="1078">
                             <structure name="numberFormat">
                                 <property name="category">Currency</property>
-                                <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                                <property name="pattern">$#,##0{RoundingMode=HALF_UP}</property>
                             </structure>
                             <property name="textAlign">right</property>
                             <property name="whiteSpace">nowrap</property>
@@ -4830,22 +4843,6 @@ if (!this.getViewer().isInteractive())
                     </cell>
                 </row>
             </detail>
-            <footer>
-                <row id="1081">
-                    <cell id="1082"/>
-                    <cell id="1083"/>
-                    <cell id="1084"/>
-                    <cell id="1085"/>
-                    <cell id="1086"/>
-                    <cell id="1087"/>
-                    <cell id="1088"/>
-                    <cell id="1089"/>
-                    <cell id="1090"/>
-                    <cell id="1091"/>
-                    <cell id="1092"/>
-                    <cell id="1093"/>
-                </row>
-            </footer>
         </table>
     </body>
     <list-property name="images">
