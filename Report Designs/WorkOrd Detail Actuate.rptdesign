@@ -16,6 +16,17 @@
             <property name="namespace">ThemesReportItems3</property>
         </structure>
     </list-property>
+    <method name="onContentUpdate"><![CDATA[var uiOptions = this.getViewer().getUIOptions();
+
+// Remove ability for user to change interactivity options
+uiOptions.enableEditReport(false);
+
+// Set the modified UI Options back into the Viewer
+this.getViewer().setUIOptions(uiOptions);
+
+// If Interactivity is not enabled, enable it
+if (!this.getViewer().isInteractive())
+	this.getViewer().enableIV();]]></method>
     <parameters>
         <scalar-parameter name="cnt" id="92">
             <property name="valueType">static</property>
