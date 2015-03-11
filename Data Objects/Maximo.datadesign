@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150128-0131 Build &lt;4.2.3.v20150128-0131></property>
     <data-sources>
         <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Maximo" id="2">
             <list-property name="privateDriverProperties">
@@ -20,9 +20,9 @@
                 </ex-property>
             </list-property>
             <property name="odaDriverClass">com.actuate.jdbc.sqlserver.SQLServerDriver</property>
-            <property name="odaURL">jdbc:actuate:sqlserver://localhost:1433;databasename=MAXTBL</property>
-            <property name="odaUser">sa</property>
-            <encrypted-property name="odaPassword" encryptionID="jce">bc3c04e2fedfc17e</encrypted-property>
+            <property name="odaURL">jdbc:actuate:sqlserver://ACTUATEONE\sqlexpress;databasename=MAXTBL;AuthenticationMethod=ntlmjava;domaind=ActuateOne</property>
+            <property name="odaUser">ActuateOne\ActuateUser</property>
+            <encrypted-property name="odaPassword" encryptionID="jce">e8e06d7e395d6ba1</encrypted-property>
         </oda-data-source>
         <oda-data-source extensionID="com.actuate.data.oda.birt360plus" name="Maximo360" id="6">
             <list-property name="privateDriverProperties">

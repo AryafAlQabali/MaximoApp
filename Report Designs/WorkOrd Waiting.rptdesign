@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150128-0131 Build &lt;4.2.3.v20150128-0131></property>
     <list-property name="propertyBindings">
         <structure>
             <property name="name">queryText</property>
@@ -73,7 +73,12 @@ if (!this.getViewer().isInteractive())
     </parameters>
     <data-sources>
         <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="224"
- extends="Maximo.Data Source"/>
+ extends="Maximo.Data Source">
+            <property name="odaDriverClass">com.actuate.jdbc.sqlserver.SQLServerDriver</property>
+            <property name="odaURL">jdbc:actuate:sqlserver://ACTUATEONE\sqlexpress;databasename=MAXTBL;AuthenticationMethod=ntlmjava;domaind=ActuateOn</property>
+            <property name="odaUser">ActuateOne\ActuateUser</property>
+            <encrypted-property name="odaPassword" encryptionID="jce">e8e06d7e395d6ba1</encrypted-property>
+        </oda-data-source>
     </data-sources>
     <data-sets>
         <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Work Order Detail Data Set" id="8">
